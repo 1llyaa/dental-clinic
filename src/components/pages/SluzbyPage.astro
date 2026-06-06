@@ -74,25 +74,35 @@ document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
 const sections = document.querySelectorAll('.svc-block');
 const anchors  = document.querySelectorAll('.anchor-nav a');
-let clickLock = false;
+let scrollingFromClick = false;
+let lockTimer: ReturnType<typeof setTimeout> | null = null;
+
+function setActive(el: Element) {
+  anchors.forEach(x => x.classList.remove('active'));
+  el.classList.add('active');
+  (el as HTMLElement).scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+}
 
 anchors.forEach(a => {
   a.addEventListener('click', () => {
-    anchors.forEach(x => x.classList.remove('active'));
-    a.classList.add('active');
-    (a as HTMLElement).scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-    clickLock = true;
-    setTimeout(() => { clickLock = false; }, 1200);
+    setActive(a);
+    scrollingFromClick = true;
+    if (lockTimer) clearTimeout(lockTimer);
+    if ('onscrollend' in window) {
+      window.addEventListener('scrollend', () => { scrollingFromClick = false; }, { once: true });
+      lockTimer = setTimeout(() => { scrollingFromClick = false; }, 3000);
+    } else {
+      lockTimer = setTimeout(() => { scrollingFromClick = false; }, 3000);
+    }
   });
 });
 
 const anchorObserver = new IntersectionObserver((entries) => {
-  if (clickLock) return;
+  if (scrollingFromClick) return;
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      anchors.forEach(a => a.classList.remove('active'));
       const active = document.querySelector(`.anchor-nav a[href="#${entry.target.id}"]`);
-      if (active) { active.classList.add('active'); (active as HTMLElement).scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); }
+      if (active) setActive(active);
     }
   });
 }, { threshold: 0.2, rootMargin: '-140px 0px -60% 0px' });

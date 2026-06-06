@@ -1,16 +1,12 @@
 import cs from './cs.json';
+import en from './en.json';
+import de from './de.json';
+import it from './it.json';
 
 export type Locale = 'cs' | 'en' | 'de' | 'it';
 export type Translations = typeof cs;
 
-// When EN/DE/IT translations are ready, import and add them here.
-// Until then all locales fall back to Czech.
-const localeData: Record<Locale, Partial<Translations>> = {
-  cs,
-  en: {},
-  de: {},
-  it: {}
-};
+const localeData: Record<Locale, Partial<Translations>> = { cs, en, de, it };
 
 export function getTranslations(locale: Locale = 'cs'): Translations {
   if (locale === 'cs') return cs;

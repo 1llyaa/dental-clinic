@@ -1,0 +1,32 @@
+---
+import { getTranslations } from '../i18n/utils';
+const t = getTranslations('cs');
+
+interface Props {
+  currentYear: number;
+}
+const { currentYear } = Astro.props;
+---
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">{t.footer.brand}</div>
+        <div class="footer-legal-id">
+          {t.footer.legal1}<br />
+          {t.footer.legal2}<br />
+          {t.footer.legal3}
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="/sluzby">{t.nav.services}</a>
+        <a href="/o-nas">{t.nav.about}</a>
+        <a href="/kontakt">{t.nav.contact}</a>
+      </div>
+      <div class="footer-bottom">
+        © {currentYear} DENTIYAK s.r.o.<br />
+        <a href="/ochrana-osobnich-udaju">{t.footer.gdpr}</a>
+      </div>
+    </div>
+  </div>
+</footer>

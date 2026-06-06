@@ -1,0 +1,420 @@
+{
+  "site": {
+    "phone": "+420 602 195 413",
+    "phoneLink": "tel:+420602195413"
+  },
+  "topbar": {
+    "text": "Přijímáme nové pacienty —",
+    "cta": "zavolejte nám"
+  },
+  "nav": {
+    "logo": "Dentiyak",
+    "services": "Služby",
+    "about": "O nás",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "brand": "Dentiyak",
+    "legal1": "DENTIYAK s.r.o. · IČO 10670297",
+    "legal2": "Krajinská 251/16, 370 01 České Budějovice",
+    "legal3": "Zapsáno: KS v Českých Budějovicích, odd. C, vl. 30837",
+    "gdpr": "Ochrana osobních údajů"
+  },
+  "home": {
+    "meta": {
+      "title": "Dentiyak — Stomatologická klinika v Českých Budějovicích",
+      "description": "Dentiyak s.r.o. — zubní klinika v Českých Budějovicích. Implantáty, estetická stomatologie, PRF terapie, dentální hygiena. Přijímáme nové pacienty."
+    },
+    "hero": {
+      "h1": "Zubař, kterému budete věřit od první návštěvy",
+      "sub": "Od implantátů po estetické ošetření — pracujeme s vlastní laboratoří a vybavením, které nám dovoluje udělat věci pořádně. Nové pacienty přijímáme.",
+      "cta": "Zavolejte nám",
+      "support": "Recepce je vám k dispozici každý pracovní den.",
+      "photoAlt": "foto doktorky"
+    },
+    "whyUs": {
+      "label": "Proč právě my",
+      "title": "Co nás odlišuje",
+      "cards": [
+        {
+          "photoAlt": "foto laboratoře",
+          "title": "Máme vlastní zubní laboratoř",
+          "text": "Zubní náhrady připravujeme interně — bez prodlev, kvalitu máme pod kontrolou od začátku do konce."
+        },
+        {
+          "photoAlt": "foto vybavení",
+          "title": "Vidíme víc, než vidíte vy",
+          "text": "Pracujeme s 3D rentgenem, mikroskopem a intraorálním skenerem. Správná diagnóza je základ."
+        },
+        {
+          "photoAlt": "foto PRF",
+          "title": "Hojení z vlastní krve",
+          "text": "PRF terapie využívá vlastní krev pacienta pro přirozenou regeneraci tkání po výkonech."
+        },
+        {
+          "photoAlt": "foto rajský plyn",
+          "title": "Úzkost není překážka",
+          "text": "Pro pacienty, kteří se ošetření obávají, nabízíme sedaci rajským plynem."
+        }
+      ]
+    },
+    "services": {
+      "title": "Péče, kterou hledáte",
+      "cards": [
+        {
+          "id": "implantaty",
+          "title": "Implantáty",
+          "text": "Trvalé řešení chybějícího zubu, zhotovené ve vlastní laboratoři.",
+          "photoAlt": "foto implantátu",
+          "link": "Zjistit více →"
+        },
+        {
+          "id": "prf",
+          "title": "PRF terapie",
+          "text": "Hojení podpořené vlastní krví pacienta, méně komplikací po výkonech.",
+          "photoAlt": "foto PRF",
+          "link": "Zjistit více →"
+        },
+        {
+          "id": "estetika",
+          "title": "Estetická stomatologie",
+          "text": "Fasety, korunky nebo kompozity — kontrolováno 3D skenerem.",
+          "photoAlt": "foto estetika",
+          "link": "Zjistit více →"
+        },
+        {
+          "id": "hygiena",
+          "title": "Dentální hygiena",
+          "text": "Prodlužuje životnost výplní, korunek i implantátů.",
+          "photoAlt": "foto hygiena",
+          "link": "Zjistit více →"
+        }
+      ],
+      "tags": [
+        { "id": "zachovna", "text": "Záchovná stomatologie" },
+        { "id": "chirurgie", "text": "Stomatochirurgie" },
+        { "id": "deti", "text": "Pedostomatologie" },
+        { "id": "beleni", "text": "Bělení zubů" },
+        { "id": "rajsky-plyn", "text": "Rajský plyn" },
+        { "id": "klouby", "text": "Klouby / TMJ" },
+        { "id": "ortodoncie", "text": "Ortodoncie" }
+      ]
+    },
+    "team": {
+      "label": "Váš tým",
+      "title": "Lidé, o které se postaráte",
+      "sub": "Fotografie a biografie doplníme po fotografickém ateliéru.",
+      "members": [
+        { "name": "MDDr. Nina Štěrbáková", "role": "Zubní lékařka" },
+        { "name": "—", "role": "Dentální hygienistka" },
+        { "name": "—", "role": "Recepce" }
+      ]
+    },
+    "faq": {
+      "title": "Časté otázky",
+      "items": [
+        {
+          "q": "Měl jsem u zubaře špatnou zkušenost. Jak to bude tentokrát?",
+          "a": "Rozumíme tomu a bereme to vážně. Proto pracujeme pod mikroskopem, s přesností a v klidu, který dává prostor i vám. A pokud je strach příliš velký, máme rajský plyn.",
+          "open": true
+        },
+        {
+          "q": "Nevím, jestli na to mám peníze. Kde zjistím cenu?",
+          "a": "Na první konzultaci dostanete konkrétní plán léčby s jasnou cenou — ještě předtím, než se rozhodnete. Žádné závazky předem.",
+          "open": false
+        },
+        {
+          "q": "Hledám zubaře dlouho a nikde mě neberou. Zkusím to i u vás?",
+          "a": "Ano, noví pacienti jsou u nás vítáni. Stačí zavolat na <strong>+420 602 195 413</strong> — recepce je k dispozici každý pracovní den od 8:00 do 16:00.",
+          "open": false
+        },
+        {
+          "q": "Které pojišťovny u vás berete?",
+          "a": "Máme smlouvu s VZP (111), ČPZP (205), OZP (207), VoZP (201) a ZPMV (211). Nadstandardní výkony jako implantáty, estetiku nebo bělení hradíte přímo — cenu vám sdělíme předem po konzultaci.",
+          "open": false
+        }
+      ]
+    },
+    "cta": {
+      "title": "Zavolejte. Zbytek zařídíme my.",
+      "sub": "Recepce vám pomůže najít termín a odpoví na základní otázky ještě před návštěvou.",
+      "hours": "Po–Pá 8:00–16:00",
+      "steps": [
+        "Zavoláte — recepce je k dispozici celý pracovní den.",
+        "Domluví se termín, který vám vyhovuje.",
+        "Na místě vám lékař vysvětlí vše a navrhne plán léčby."
+      ]
+    }
+  },
+  "sluzby": {
+    "meta": {
+      "title": "Služby — Dentiyak stomatologická klinika",
+      "description": "Přehled služeb kliniky Dentiyak: implantáty, PRF terapie, estetická stomatologie, dentální hygiena, rajský plyn, chirurgie, pedostomatologie a další."
+    },
+    "header": {
+      "h1": "Péče, kterou hledáte",
+      "sub": "Každé ošetření začíná konzultací a plánem — víte předem, co vás čeká, kolik to bude stát a proč to děláme právě takhle."
+    },
+    "anchors": [
+      { "id": "implantaty", "text": "Implantáty", "priority": true },
+      { "id": "prf", "text": "PRF terapie", "priority": true },
+      { "id": "estetika", "text": "Estetika", "priority": true },
+      { "id": "hygiena", "text": "Hygiena", "priority": true },
+      { "id": "rajsky-plyn", "text": "Rajský plyn", "priority": true },
+      { "id": "zachovna", "text": "Záchovná", "priority": false },
+      { "id": "chirurgie", "text": "Chirurgie", "priority": false },
+      { "id": "deti", "text": "Děti", "priority": false },
+      { "id": "beleni", "text": "Bělení", "priority": false },
+      { "id": "klouby", "text": "Klouby", "priority": false },
+      { "id": "ortodoncie", "text": "Ortodoncie", "priority": false }
+    ],
+    "cta": {
+      "title": "Potřebujete poradit, kam začít?",
+      "sub": "Zavolejte — recepce vám pomůže najít termín a zodpoví základní otázky ještě před návštěvou.",
+      "hours": "Po–Pá 8:00–16:00"
+    },
+    "services": [
+      {
+        "id": "implantaty",
+        "title": "Implantáty",
+        "photoAlt": "foto implantátu",
+        "paragraphs": [
+          "Chybějící zub nemusí znamenat kompromis. Zubní implantát je titanový kořen zavedený do čelisti, na který se nasadí korunka — vizuálně i funkčně nerozlišitelná od vlastního zubu.",
+          "Implantáty plánujeme na základě 3D rentgenu, který nám ukáže přesnou strukturu kosti. Protetickou práci — korunky, můstky i celkové náhrady — vyrábíme ve vlastní laboratoři. Díky tomu kontrolujeme kvalitu od začátku do konce a zkracujeme čekání na výsledek.",
+          "U chirurgických výkonů využíváme PRF terapii, která z vlastní krve pacienta podporuje přirozené hojení tkání."
+        ],
+        "note": "Cenu implantátu stanovíme individuálně po konzultaci.",
+        "cta": "Zavolejte — probereme, co potřebujete"
+      },
+      {
+        "id": "prf",
+        "title": "PRF terapie — hojení z vlastní krve",
+        "photoAlt": "foto PRF centrifugy",
+        "intro": "PRF je autologní regenerační metoda, která využívá vlastní krev pacienta. Z malého odběru se centrifugací získá koncentrát obsahující růstové faktory a bioaktivní molekuly. Ten se aplikuje přímo do místa ošetření, kde podporuje přirozené hojivé procesy, tvorbu kolagenu a obnovu buněk.",
+        "listHeading": "Ve stomatologii PRF používáme při:",
+        "list": [
+          "Podpoře hojení po extrakcích",
+          "Implantologických výkonech",
+          "Regeneraci parodontálních tkání",
+          "Augmentaci kostní tkáně a sinus liftu",
+          "Léčbě parodontitidy"
+        ],
+        "additionalUse": "Další oblasti využití: estetická medicína (zlepšení kvality pokožky, redukce jemných vrásek, elasticita pleti, regenerace po zákrocích, vzhled jizev), podpora růstu vlasů (androgenetická alopecie, difuzní padání) a pohybový aparát (osteoartróza, bolesti kloubů, tendinopatie).",
+        "safety": "Bezpečnost: PRF využívá výhradně vlastní biologický materiál pacienta — riziko alergické reakce je minimální a biologická kompatibilita vysoká. Ošetření trvá přibližně 30–60 minut.",
+        "note": "O vhodnosti PRF terapie rozhoduje lékař po konzultaci.",
+        "cta": "Zavolejte a domluvte termín"
+      },
+      {
+        "id": "estetika",
+        "title": "Estetická stomatologie",
+        "photoAlt": "foto estetika",
+        "paragraphs": [
+          "Fasety, korunky, kompozitní úpravy nebo celkové rekonstrukce chrupu — estetické ošetření u nás vychází z přesné diagnostiky intraorálním skenerem a práce ve vlastní laboratoři.",
+          "Každý zásah plánujeme tak, aby výsledek vypadal přirozeně. Neděláme „hollywoodské úsměvy“ na počkání — děláme zuby, které sedí k vašemu obličeji a vydrží."
+        ],
+        "cta": "Domluvte si konzultaci"
+      },
+      {
+        "id": "hygiena",
+        "title": "Dentální hygiena",
+        "photoAlt": "foto hygiena",
+        "paragraphs": [
+          "Pravidelná profesionální hygiena prodlužuje životnost výplní, korunek i implantátů. Odstraňuje zubní kámen a pigmentace, které domácí péčí nezvládnete.",
+          "Hygienistka vám také ukáže, jak se o zuby starat doma — správnou techniku čištění, mezizubní kartáčky, nit. Prevence je vždycky levnější než léčba."
+        ],
+        "cta": "Objednejte se na hygienu"
+      },
+      {
+        "id": "rajsky-plyn",
+        "title": "Ošetření s rajským plynem",
+        "photoAlt": "foto rajský plyn",
+        "paragraphs": [
+          "Pokud se ošetření bojíte, nemusíte se za to stydět — a nemusíte kvůli tomu odkládat návštěvu zubaře.",
+          "Rajský plyn (oxid dusný) se vdechuje přes nosní masku během ošetření. Navozuje stav uvolnění a snižuje vnímání nepříjemných podnětů. Pacient zůstává při vědomí, dýchá sám a po ošetření se účinek rychle vytratí.",
+          "Rajský plyn nabízíme dospělým i dětem. Je to bezpečný způsob, jak si projít ošetřením v klidu."
+        ],
+        "cta": "Řekněte recepci, že máte zájem"
+      },
+      {
+        "id": "zachovna",
+        "title": "Záchovná stomatologie",
+        "photoAlt": "foto záchovná",
+        "paragraphs": [
+          "Výplně, ošetření kořenových kanálků, léčba zubního kazu — základ toho, proč k zubaři chodíte. Pracujeme pod mikroskopem, který nám dovoluje vidět detaily neviditelné pouhým okem. To znamená přesnější práci, menší zásahy a lepší výsledky.",
+          "Materiály pro výplně a rekonstrukce vybíráme podle konkrétní situace — vždy s ohledem na odolnost a estetiku."
+        ],
+        "cta": "Objednejte se"
+      },
+      {
+        "id": "chirurgie",
+        "title": "Chirurgické výkony",
+        "photoAlt": "foto chirurgie",
+        "paragraphs": [
+          "Extrakce zubů moudrosti, chirurgické extrakce retinovaných zubů, resekce kořenových hrotů a další chirurgické zákroky v dutině ústní.",
+          "U chirurgických výkonů standardně využíváme PRF terapii — koncentrát z vlastní krve pacienta, který podporuje hojení a snižuje riziko komplikací po zákroku. Výkony plánujeme na základě 3D rentgenu."
+        ],
+        "cta": "Zavolejte a domluvte konzultaci"
+      },
+      {
+        "id": "deti",
+        "title": "Zuby pro děti",
+        "photoAlt": "foto dětská stomatologie",
+        "paragraphs": [
+          "Dětský pacient potřebuje jiný přístup než dospělý — víc času, víc trpělivosti a prostředí, kde se nebude bát.",
+          "Ošetřujeme děti od prvních mléčných zubů. Učíme je, že zubař není něco, čeho se bojí. Pro nejmenší nebo úzkostné pacienty nabízíme ošetření s rajským plynem, který pomáhá zvládnout strach bez celkové anestezie."
+        ],
+        "cta": "Objednejte dítě na prohlídku"
+      },
+      {
+        "id": "beleni",
+        "title": "Bělení zubů",
+        "photoAlt": "foto bělení",
+        "paragraphs": [
+          "Profesionální bělení v ordinaci je bezpečnější a účinnější než domácí sady z drogerie. Výsledek je viditelný, ale přirozený — nejde o porcelánovou bílou, ale o váš vlastní odstín bez pigmentací a zabarvení.",
+          "Před bělením doporučujeme absolvovat dentální hygienu — čistý povrch zubu reaguje na bělení lépe."
+        ],
+        "cta": "Domluvte si konzultaci"
+      },
+      {
+        "id": "klouby",
+        "title": "Léčba kloubů a TMJ",
+        "photoAlt": "foto TMJ",
+        "paragraphs": [
+          "Bolesti čelistního kloubu, cvakání při otevírání úst, bolesti hlavy vycházející z čelisti — to jsou potíže, které pacienti často dlouho přehlížejí nebo řeší u jiných odborníků.",
+          "Diagnostikujeme příčinu obtíží a navrhujeme léčbu — od nákusných dlah po PRF terapii, která u kloubních a muskuloskeletálních potíží (osteoartróza, bolesti kloubů, tendinopatie) podporuje přirozenou regeneraci tkání."
+        ],
+        "cta": "Popište nám, co vás trápí"
+      },
+      {
+        "id": "ortodoncie",
+        "title": "Ortodoncie",
+        "photoAlt": "foto ortodoncie",
+        "paragraphs": [
+          "Rovnátka a korekci skusu zajišťujeme ve spolupráci s externím ortodontistou. Pokud potřebujete posouzení, zda je ortodontická léčba na místě, začněte konzultací u nás — na základě vyšetření vás odkážeme ke specialistovi, se kterým dlouhodobě spolupracujeme."
+        ],
+        "cta": "Zavolejte a domluvte konzultaci"
+      }
+    ]
+  },
+  "onas": {
+    "meta": {
+      "title": "O nás — Dentiyak stomatologická klinika",
+      "description": "Poznejte tým kliniky Dentiyak v Českých Budějovicích. Vlastní laboratoř, 3D rentgen, mikroskop, PRF terapie. MDDr. Nina Štěrbáková."
+    },
+    "header": {
+      "h1": "O nás",
+      "sub": "Jsme stomatologická klinika, kde na vás mají čas. Pracujeme s vybavením, které nám dovoluje být přesní, a s přístupem, který vám dovoluje být v klidu."
+    },
+    "story": {
+      "h2": "Jak to u nás funguje",
+      "paragraphs": [
+        "Dentiyak je klinika, která stojí na jednoduchém principu — dělat věci pořádně a dát si na ně čas. Nehoníme počty pacientů. Každé ošetření začíná konzultací, při které společně projdeme, co je potřeba, a navrhneme plán léčby s jasnou cenou.",
+        "Máme vlastní zubní laboratoř — korunky, můstky a protetické práce vyrábíme interně. To znamená kratší čekání, přímou komunikaci s technikem a kontrolu kvality od začátku do konce.",
+        "Pracujeme s 3D rentgenem, operačním mikroskopem a intraorálním skenerem. Používáme PRF terapii — regenerační metodu z vlastní krve pacienta, která podporuje hojení po chirurgických výkonech. A pro pacienty, kteří se ošetření obávají, nabízíme rajský plyn."
+      ],
+      "photoAlt": "foto interiéru kliniky"
+    },
+    "team": {
+      "label": "Váš tým",
+      "title": "Lidé, o které se postaráte",
+      "sub": "Fotografie a biografie doplníme po fotografickém ateliéru.",
+      "members": [
+        { "name": "MDDr. Nina Štěrbáková", "role": "Zubní lékařka" },
+        { "name": "—", "role": "Dentální hygienistka" },
+        { "name": "—", "role": "Recepce" }
+      ]
+    },
+    "equip": {
+      "title": "Čím pracujeme",
+      "cards": [
+        {
+          "title": "3D rentgen (CBCT)",
+          "text": "Trojrozměrný snímek ukazující strukturu kosti, polohu nervů a kořenů. Základ pro plánování implantátů a chirurgických výkonů."
+        },
+        {
+          "title": "Operační mikroskop",
+          "text": "Zvětšení, které dovoluje vidět detaily neviditelné pouhým okem. Přesnější práce, menší zásahy."
+        },
+        {
+          "title": "Intraorální skener",
+          "text": "Digitální otisk chrupu bez nepříjemné otiskovací hmoty. Přesnější, rychlejší, pohodlnější."
+        },
+        {
+          "title": "Vlastní laboratoř",
+          "text": "Korunky, můstky a protetické práce vyráběné na místě — přímá kontrola kvality, kratší čekání."
+        },
+        {
+          "title": "PRF centrifuga",
+          "text": "Příprava koncentrátu z vlastní krve pacienta pro podporu přirozeného hojení po výkonech."
+        }
+      ]
+    },
+    "insurance": {
+      "h2": "Smluvní pojišťovny",
+      "text": "U výkonů hrazených z pojištění neplatíte nic. Nadstandardní ošetření (implantáty, estetika, bělení, hygiena) se hradí přímo — cenu vám sdělíme předem po konzultaci.",
+      "tags": ["VZP (111)", "ČPZP (205)", "OZP (207)", "VoZP (201)", "ZPMV (211)"]
+    },
+    "cta": {
+      "title": "Chcete nás poznat osobně?",
+      "sub": "Zavolejte — domluvíme první konzultaci, kde projdeme, co potřebujete, a navrhneme plán.",
+      "hours": "Po–Pá 8:00–16:00"
+    }
+  },
+  "kontakt": {
+    "meta": {
+      "title": "Kontakt — Dentiyak stomatologická klinika",
+      "description": "Kontaktujte kliniku Dentiyak v Českých Budějovicích. Telefon +420 602 195 413, Krajinská 251/16. Po-Pá 8:00-16:00. Přijímáme nové pacienty."
+    },
+    "header": {
+      "h1": "Kontakt",
+      "sub": "Všechno zařídíte jedním telefonátem. Recepce je vám k dispozici každý pracovní den."
+    },
+    "contact": {
+      "phoneHeading": "Zavolejte nám",
+      "hoursHeading": "Ordinační hodiny",
+      "addressHeading": "Kde nás najdete",
+      "hours": [
+        { "day": "Pondělí", "time": "8:00 – 16:00" },
+        { "day": "Úterý", "time": "8:00 – 16:00" },
+        { "day": "Středa", "time": "8:00 – 16:00" },
+        { "day": "Čtvrtek", "time": "8:00 – 16:00" },
+        { "day": "Pátek", "time": "8:00 – 16:00" },
+        { "day": "Sobota", "time": "Zavřeno", "closed": true },
+        { "day": "Neděle", "time": "Zavřeno", "closed": true }
+      ],
+      "addressLine1": "Krajinská 251/16",
+      "addressLine2": "370 01 České Budějovice",
+      "addressNote": "2. patro, vchod vedle Tesca",
+      "mapAlt": "Google Maps — Krajinská 251/16, České Budějovice"
+    },
+    "newPatients": {
+      "h2": "Pro nové pacienty",
+      "paragraphs": [
+        "Jste u nás poprvé? Nemusíte nic připravovat — stačí zavolat.",
+        "Recepce se vás zeptá na jméno, telefon, pojišťovnu a co potřebujete řešit. Na první návštěvě vás lékař vyšetří, probere s vámi situaci a navrhne plán léčby s cenou. Bez závazků — rozhodnete se, až budete mít všechny informace.",
+        "Noví pacienti jsou u nás vítáni."
+      ],
+      "cta": "Zavolejte a objednejte se"
+    },
+    "emergency": {
+      "h2": "Akutní bolest mimo ordinační hodiny",
+      "intro": "Pokud vás trápí akutní zubní bolest a naše ordinace je zavřená, obraťte se na zubní pohotovost:",
+      "name": "Zubní pohotovost s.r.o.",
+      "address": "Lidická tř. 78, 370 01 České Budějovice",
+      "addressNote": "(budova České spořitelny, vstup z Lidické třídy, 1. patro)",
+      "url": "www.zubnipohotovostcb.cz",
+      "hoursHeading": "Ordinační hodiny pohotovosti:",
+      "hours1": "Po–Pá: 16:00 – 22:00",
+      "hours2": "So, Ne, svátky: 8:00 – 20:00"
+    },
+    "legalId": {
+      "h2": "Identifikace poskytovatele",
+      "text": "DENTIYAK s.r.o.\nIČO: 10670297 · DIČ: CZ10670297\nKrajinská 251/16, České Budějovice 1, 370 01 České Budějovice\nZapsáno v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 30837"
+    },
+    "cta": {
+      "title": "Zavolejte. Zbytek zařídíme my.",
+      "sub": "Recepce vám pomůže najít termín a odpoví na základní otázky ještě před návštěvou.",
+      "hours": "Po–Pá 8:00–16:00"
+    }
+  }
+}

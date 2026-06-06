@@ -1,0 +1,31 @@
+---
+import { getTranslations } from '../i18n/utils';
+const t = getTranslations('cs');
+const pathname = Astro.url.pathname;
+const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
+---
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">{t.nav.logo}</a>
+    <div class="nav-toggle" id="nav-toggle" aria-label="Menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="/sluzby" class:list={[{ active: isActive('/sluzby') }]}>{t.nav.services}</a>
+      <a href="/o-nas"  class:list={[{ active: isActive('/o-nas') }]}>{t.nav.about}</a>
+      <a href="/kontakt" class:list={[{ active: isActive('/kontakt') }]}>{t.nav.contact}</a>
+    </div>
+    <a href={t.site.phoneLink} class="nav-phone">{t.site.phone}</a>
+  </div>
+</nav>
+
+<script>
+const toggle = document.getElementById('nav-toggle');
+const links  = document.getElementById('nav-links');
+if (toggle && links) {
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  toggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') links.classList.toggle('open');
+  });
+}
+</script>

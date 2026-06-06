@@ -1,0 +1,134 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getTranslations, type Locale } from '../../i18n/utils';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+const h = t.home;
+---
+<Base title={h.meta.title} description={h.meta.description}>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>{h.hero.h1}</h1>
+        <p>{h.hero.sub}</p>
+        <a href={t.site.phoneLink} class="hero-cta">
+          {h.hero.cta}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </a>
+        <div class="hero-support">{h.hero.support}</div>
+      </div>
+      <div class="hero-portrait">{h.hero.photoAlt}</div>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <div class="wrap">
+      <div class="section-label">{h.whyUs.label}</div>
+      <h2 class="section-title">{h.whyUs.title}</h2>
+      <div class="why-grid">
+        {h.whyUs.cards.map((card, i) => (
+          <div class="why-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
+            <div class="why-card-photo">{card.photoAlt}</div>
+            {i === 0 && <svg class="why-card-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="12" width="20" height="14" rx="2"/><path d="M10 12V8a6 6 0 0112 0v4"/><circle cx="16" cy="20" r="2"/></svg>}
+            {i === 1 && <svg class="why-card-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="14" r="8"/><path d="M16 6v-2M16 22v6M10 14H4M28 14h-6"/><circle cx="16" cy="14" r="3"/></svg>}
+            {i === 2 && <svg class="why-card-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c0 0-8 9-8 16a8 8 0 0016 0c0-7-8-16-8-16z"/><circle cx="16" cy="20" r="3"/></svg>}
+            {i === 3 && <svg class="why-card-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20c0-4 3-6 5-8s3-5 3-8"/><path d="M24 20c0-4-3-6-5-8s-3-5-3-8"/><ellipse cx="16" cy="24" rx="10" ry="4"/></svg>}
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="wrap">
+      <h2 class="section-title">{h.services.title}</h2>
+      <div class="svc-grid">
+        {h.services.cards.map((card, i) => (
+          <a href={`/sluzby#${card.id}`} class="svc-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
+            <div class="svc-card-photo">{card.photoAlt}</div>
+            <div class="svc-card-body">
+              <h4>{card.title}</h4>
+              <p>{card.text}</p>
+              <span class="svc-card-link">{card.link}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="svc-secondary">
+        {h.services.tags.map(tag => (
+          <a href={`/sluzby#${tag.id}`} class="svc-tag">{tag.text}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="wrap">
+      <div class="section-label">{h.team.label}</div>
+      <h2 class="section-title">{h.team.title}</h2>
+      <p class="section-sub">{h.team.sub}</p>
+      <div class="team-grid">
+        {h.team.members.map((member, i) => (
+          <div class="team-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
+            <div class="team-card-photo">foto</div>
+            <div class="team-card-info">
+              <div class="team-card-name">{member.name}</div>
+              <div class="team-card-role">{member.role}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <h2 class="section-title">{h.faq.title}</h2>
+      <div class="faq-list">
+        {h.faq.items.map((item) => (
+          <div class:list={['faq-item', { open: item.open }]}>
+            <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+              <span>{item.q}</span>
+            </div>
+            <div class="faq-a" set:html={item.a} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-block">
+    <div class="wrap">
+      <h2>{h.cta.title}</h2>
+      <p class="cta-sub">{h.cta.sub}</p>
+      <a href={t.site.phoneLink} class="cta-phone">{t.site.phone}</a>
+      <div class="cta-hours">{h.cta.hours}</div>
+      <div class="cta-steps">
+        {h.cta.steps.map((step, i) => (
+          <div class="cta-step">
+            <div class="cta-step-num">{i + 1}</div>
+            <div class="cta-step-text">{step}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>

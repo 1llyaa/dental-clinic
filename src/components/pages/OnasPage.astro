@@ -1,0 +1,92 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getTranslations, type Locale } from '../../i18n/utils';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+const o = t.onas;
+---
+<Base title={o.meta.title} description={o.meta.description}>
+
+  <section class="page-header">
+    <div class="wrap">
+      <h1>{o.header.h1}</h1>
+      <p>{o.header.sub}</p>
+    </div>
+  </section>
+
+  <section class="about-story">
+    <div class="wrap">
+      <div class="about-story-inner fade-in">
+        <div>
+          <h2>{o.story.h2}</h2>
+          {o.story.paragraphs.map(p => <p>{p}</p>)}
+        </div>
+        <div class="about-photo">{o.story.photoAlt}</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="wrap">
+      <div class="section-label">{o.team.label}</div>
+      <h2>{o.team.title}</h2>
+      <p class="section-sub">{o.team.sub}</p>
+      <div class="team-grid">
+        {o.team.members.map((member, i) => (
+          <div class="fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
+            <div class="team-card-photo">foto</div>
+            <div class="team-card-info">
+              <div class="team-card-name">{member.name}</div>
+              <div class="team-card-role">{member.role}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="equip">
+    <div class="wrap">
+      <h2>{o.equip.title}</h2>
+      <div class="equip-grid">
+        {o.equip.cards.map((card, i) => (
+          <div class="equip-card fade-in" style={i > 0 ? `animation-delay:${(i % 3) * 0.1}s` : ''}>
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance">
+    <div class="wrap fade-in">
+      <h2>{o.insurance.h2}</h2>
+      <p>{o.insurance.text}</p>
+      <div class="insurance-tags">
+        {o.insurance.tags.map(tag => <span class="ins-tag">{tag}</span>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-block">
+    <div class="wrap">
+      <h2>{o.cta.title}</h2>
+      <p class="cta-sub">{o.cta.sub}</p>
+      <a href={t.site.phoneLink} class="cta-phone">{t.site.phone}</a>
+      <div class="cta-hours">{o.cta.hours}</div>
+    </div>
+  </section>
+
+</Base>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>

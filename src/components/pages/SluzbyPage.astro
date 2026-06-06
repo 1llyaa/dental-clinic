@@ -1,0 +1,87 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getTranslations, type Locale } from '../../i18n/utils';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+const s = t.sluzby;
+---
+<Base title={s.meta.title} description={s.meta.description}>
+
+  <section class="page-header">
+    <div class="wrap">
+      <h1>{s.header.h1}</h1>
+      <p>{s.header.sub}</p>
+    </div>
+  </section>
+
+  <div class="anchor-nav">
+    <div class="anchor-nav-inner">
+      {s.anchors.map(a => (
+        <a href={`#${a.id}`} class:list={[{ priority: a.priority }]}>{a.text}</a>
+      ))}
+    </div>
+  </div>
+
+  {s.services.map((svc) => (
+    <section class="svc-block" id={svc.id}>
+      <div class="wrap">
+        <div class="svc-block-inner fade-in">
+          <div class="svc-block-text">
+            <h2>{svc.title}</h2>
+            {'paragraphs' in svc && (svc as any).paragraphs.map((p: string) => <p>{p}</p>)}
+            {'intro' in svc && (
+              <>
+                <p>{(svc as any).intro}</p>
+                <p><strong>{(svc as any).listHeading}</strong></p>
+                <ul class="svc-list">
+                  {(svc as any).list.map((item: string) => <li>{item}</li>)}
+                </ul>
+                <p set:html={`<strong>Další oblasti využití:</strong> ${(svc as any).additionalUse.replace('Další oblasti využití: ', '')}`} />
+                <div class="svc-safety">
+                  <p set:html={`<strong>Bezpečnost:</strong> ${(svc as any).safety.replace('Bezpečnost: ', '')}`} />
+                </div>
+              </>
+            )}
+            {'note' in svc && <div class="svc-note">{(svc as any).note}</div>}
+            <a href={t.site.phoneLink} class="svc-cta">{svc.cta}</a>
+          </div>
+          <div class="svc-block-photo">{svc.photoAlt}</div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="cta-block">
+    <div class="wrap">
+      <h2>{s.cta.title}</h2>
+      <p class="cta-sub">{s.cta.sub}</p>
+      <a href={t.site.phoneLink} class="cta-phone">{t.site.phone}</a>
+      <div class="cta-hours">{s.cta.hours}</div>
+    </div>
+  </section>
+
+</Base>
+
+<script>
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); fadeObserver.unobserve(entry.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+const sections = document.querySelectorAll('.svc-block');
+const anchors  = document.querySelectorAll('.anchor-nav a');
+const anchorObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      anchors.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.anchor-nav a[href="#${entry.target.id}"]`);
+      if (active) { active.classList.add('active'); active.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); }
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-140px 0px -60% 0px' });
+sections.forEach(s => anchorObserver.observe(s));
+</script>

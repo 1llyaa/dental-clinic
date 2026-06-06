@@ -1,1 +1,420 @@
-{}
+{
+  "site": {
+    "phone": "+420 602 195 413",
+    "phoneLink": "tel:+420602195413"
+  },
+  "topbar": {
+    "text": "Accepting new patients —",
+    "cta": "call us"
+  },
+  "nav": {
+    "logo": "Dentiyak",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "brand": "Dentiyak",
+    "legal1": "DENTIYAK s.r.o. · IČO 10670297",
+    "legal2": "Krajinská 251/16, 370 01 České Budějovice",
+    "legal3": "Registered: Regional Court in České Budějovice, Section C, Entry 30837",
+    "gdpr": "Privacy Policy"
+  },
+  "home": {
+    "meta": {
+      "title": "Dentiyak — Dental clinic in České Budějovice",
+      "description": "Dentiyak s.r.o. — dental clinic in České Budějovice. Implants, aesthetic dentistry, PRF therapy, dental hygiene. Accepting new patients."
+    },
+    "hero": {
+      "h1": "A dentist you'll trust from your very first visit",
+      "sub": "From implants to aesthetic treatment — we work with our own laboratory and equipment that lets us do things properly. Now accepting new patients.",
+      "cta": "Call us",
+      "support": "Reception is available every working day.",
+      "photoAlt": "doctor photo"
+    },
+    "whyUs": {
+      "label": "Why us",
+      "title": "What sets us apart",
+      "cards": [
+        {
+          "photoAlt": "laboratory photo",
+          "title": "We have our own dental laboratory",
+          "text": "We prepare dental prosthetics in-house — no delays, we control quality from start to finish."
+        },
+        {
+          "photoAlt": "equipment photo",
+          "title": "We see more than you do",
+          "text": "We work with a 3D X-ray, microscope and intraoral scanner. The right diagnosis is everything."
+        },
+        {
+          "photoAlt": "PRF photo",
+          "title": "Healing from your own blood",
+          "text": "PRF therapy uses the patient's own blood for natural tissue regeneration after procedures."
+        },
+        {
+          "photoAlt": "nitrous oxide photo",
+          "title": "Anxiety is not an obstacle",
+          "text": "For patients who are afraid of treatment, we offer sedation with nitrous oxide."
+        }
+      ]
+    },
+    "services": {
+      "title": "The care you're looking for",
+      "cards": [
+        {
+          "id": "implantaty",
+          "title": "Implants",
+          "text": "A permanent solution for missing teeth, made in our own laboratory.",
+          "photoAlt": "implant photo",
+          "link": "Find out more →"
+        },
+        {
+          "id": "prf",
+          "title": "PRF Therapy",
+          "text": "Healing supported by the patient's own blood, fewer complications after procedures.",
+          "photoAlt": "PRF photo",
+          "link": "Find out more →"
+        },
+        {
+          "id": "estetika",
+          "title": "Aesthetic Dentistry",
+          "text": "Veneers, crowns or composites — verified with a 3D scanner.",
+          "photoAlt": "aesthetics photo",
+          "link": "Find out more →"
+        },
+        {
+          "id": "hygiena",
+          "title": "Dental Hygiene",
+          "text": "Extends the life of fillings, crowns and implants.",
+          "photoAlt": "hygiene photo",
+          "link": "Find out more →"
+        }
+      ],
+      "tags": [
+        { "id": "zachovna", "text": "Conservative dentistry" },
+        { "id": "chirurgie", "text": "Oral surgery" },
+        { "id": "deti", "text": "Paediatric dentistry" },
+        { "id": "beleni", "text": "Teeth whitening" },
+        { "id": "rajsky-plyn", "text": "Nitrous oxide" },
+        { "id": "klouby", "text": "Joints / TMJ" },
+        { "id": "ortodoncie", "text": "Orthodontics" }
+      ]
+    },
+    "team": {
+      "label": "Your team",
+      "title": "The people who will take care of you",
+      "sub": "Photos and biographies to follow after the photo shoot.",
+      "members": [
+        { "name": "MDDr. Nina Štěrbáková", "role": "Dentist" },
+        { "name": "—", "role": "Dental hygienist" },
+        { "name": "—", "role": "Reception" }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "I've had a bad experience at the dentist. How will it be this time?",
+          "a": "We understand and take it seriously. That's why we work under a microscope, with precision and in a calm environment that gives you space too. And if the fear is too great, we have nitrous oxide.",
+          "open": true
+        },
+        {
+          "q": "I'm not sure I can afford it. How do I find out the price?",
+          "a": "At the first consultation you'll receive a specific treatment plan with a clear price — before you decide. No commitments upfront.",
+          "open": false
+        },
+        {
+          "q": "I've been looking for a dentist for a long time and nobody will take me. Can I try with you?",
+          "a": "Yes, new patients are welcome here. Just call <strong>+420 602 195 413</strong> — reception is available every working day from 8:00 to 16:00.",
+          "open": false
+        },
+        {
+          "q": "Which insurance companies do you accept?",
+          "a": "We have contracts with VZP (111), ČPZP (205), OZP (207), VoZP (201) and ZPMV (211). Non-standard procedures such as implants, aesthetics or whitening are paid directly — we will tell you the price in advance after consultation.",
+          "open": false
+        }
+      ]
+    },
+    "cta": {
+      "title": "Call us. We'll handle the rest.",
+      "sub": "Reception will help you find an appointment and answer basic questions before your visit.",
+      "hours": "Mon–Fri 8:00–16:00",
+      "steps": [
+        "You call — reception is available all working day.",
+        "An appointment that suits you is arranged.",
+        "On the day, the doctor explains everything and proposes a treatment plan."
+      ]
+    }
+  },
+  "sluzby": {
+    "meta": {
+      "title": "Services — Dentiyak dental clinic",
+      "description": "Overview of Dentiyak clinic services: implants, PRF therapy, aesthetic dentistry, dental hygiene, nitrous oxide, oral surgery, paediatric dentistry and more."
+    },
+    "header": {
+      "h1": "The care you're looking for",
+      "sub": "Every treatment starts with a consultation and a plan — you know in advance what to expect, what it will cost and why we do it this way."
+    },
+    "anchors": [
+      { "id": "implantaty", "text": "Implants", "priority": true },
+      { "id": "prf", "text": "PRF therapy", "priority": true },
+      { "id": "estetika", "text": "Aesthetics", "priority": true },
+      { "id": "hygiena", "text": "Hygiene", "priority": true },
+      { "id": "rajsky-plyn", "text": "Nitrous oxide", "priority": true },
+      { "id": "zachovna", "text": "Conservative", "priority": false },
+      { "id": "chirurgie", "text": "Surgery", "priority": false },
+      { "id": "deti", "text": "Children", "priority": false },
+      { "id": "beleni", "text": "Whitening", "priority": false },
+      { "id": "klouby", "text": "Joints", "priority": false },
+      { "id": "ortodoncie", "text": "Orthodontics", "priority": false }
+    ],
+    "cta": {
+      "title": "Need advice on where to start?",
+      "sub": "Call us — reception will help you find an appointment and answer basic questions before your visit.",
+      "hours": "Mon–Fri 8:00–16:00"
+    },
+    "services": [
+      {
+        "id": "implantaty",
+        "title": "Implants",
+        "photoAlt": "implant photo",
+        "paragraphs": [
+          "A missing tooth doesn't have to mean a compromise. A dental implant is a titanium root inserted into the jaw, onto which a crown is placed — visually and functionally indistinguishable from your own tooth.",
+          "We plan implants based on a 3D X-ray that shows us the exact bone structure. Prosthetic work — crowns, bridges and full dentures — is made in our own laboratory. This means we control quality from start to finish and shorten the waiting time.",
+          "For surgical procedures we use PRF therapy, which uses the patient's own blood to support natural tissue healing."
+        ],
+        "note": "The price of an implant is determined individually after consultation.",
+        "cta": "Call us — we'll discuss what you need"
+      },
+      {
+        "id": "prf",
+        "title": "PRF therapy — healing from your own blood",
+        "photoAlt": "PRF centrifuge photo",
+        "intro": "PRF is an autologous regenerative method that uses the patient's own blood. From a small blood draw, centrifugation yields a concentrate containing growth factors and bioactive molecules. This is applied directly to the treatment site, where it supports natural healing processes, collagen formation and cell renewal.",
+        "listHeading": "In dentistry we use PRF for:",
+        "list": [
+          "Supporting healing after extractions",
+          "Implant procedures",
+          "Periodontal tissue regeneration",
+          "Bone augmentation and sinus lift",
+          "Treatment of periodontitis"
+        ],
+        "additionalUse": "Other areas of use: aesthetic medicine (improving skin quality, reducing fine lines, skin elasticity, post-procedure recovery, scar appearance), hair growth support (androgenetic alopecia, diffuse hair loss) and musculoskeletal system (osteoarthritis, joint pain, tendinopathy).",
+        "safety": "Safety: PRF uses exclusively the patient's own biological material — the risk of allergic reaction is minimal and biological compatibility is high. Treatment takes approximately 30–60 minutes.",
+        "note": "The suitability of PRF therapy is determined by the doctor after consultation.",
+        "cta": "Call and arrange an appointment"
+      },
+      {
+        "id": "estetika",
+        "title": "Aesthetic dentistry",
+        "photoAlt": "aesthetics photo",
+        "paragraphs": [
+          "Veneers, crowns, composite adjustments or full smile reconstructions — aesthetic treatment with us is based on precise diagnosis with an intraoral scanner and work in our own laboratory.",
+          "We plan every procedure so the result looks natural. We don't make \"Hollywood smiles\" on demand — we make teeth that fit your face and last."
+        ],
+        "cta": "Book a consultation"
+      },
+      {
+        "id": "hygiena",
+        "title": "Dental hygiene",
+        "photoAlt": "hygiene photo",
+        "paragraphs": [
+          "Regular professional hygiene extends the life of fillings, crowns and implants. It removes tartar and staining that you can't manage with home care.",
+          "The hygienist will also show you how to care for your teeth at home — the right brushing technique, interdental brushes, floss. Prevention is always cheaper than treatment."
+        ],
+        "cta": "Book a hygiene appointment"
+      },
+      {
+        "id": "rajsky-plyn",
+        "title": "Treatment with nitrous oxide",
+        "photoAlt": "nitrous oxide photo",
+        "paragraphs": [
+          "If you're afraid of treatment, you don't need to be ashamed — and you don't need to keep putting off your dentist visit because of it.",
+          "Nitrous oxide is inhaled through a nasal mask during treatment. It induces a state of relaxation and reduces the perception of unpleasant stimuli. The patient remains conscious, breathes on their own and the effect wears off quickly after treatment.",
+          "We offer nitrous oxide for adults and children. It is a safe way to get through treatment comfortably."
+        ],
+        "cta": "Tell reception you're interested"
+      },
+      {
+        "id": "zachovna",
+        "title": "Conservative dentistry",
+        "photoAlt": "conservative dentistry photo",
+        "paragraphs": [
+          "Fillings, root canal treatment, treatment of tooth decay — the basis of why you go to the dentist. We work under a microscope that allows us to see details invisible to the naked eye. This means more precise work, smaller interventions and better results.",
+          "We choose materials for fillings and restorations based on the specific situation — always with regard to durability and aesthetics."
+        ],
+        "cta": "Book an appointment"
+      },
+      {
+        "id": "chirurgie",
+        "title": "Surgical procedures",
+        "photoAlt": "surgery photo",
+        "paragraphs": [
+          "Wisdom tooth extractions, surgical extraction of impacted teeth, root apex resections and other surgical procedures in the oral cavity.",
+          "For surgical procedures we routinely use PRF therapy — a concentrate from the patient's own blood that supports healing and reduces the risk of post-operative complications. Procedures are planned on the basis of a 3D X-ray."
+        ],
+        "cta": "Call and arrange a consultation"
+      },
+      {
+        "id": "deti",
+        "title": "Children's dentistry",
+        "photoAlt": "children's dentistry photo",
+        "paragraphs": [
+          "A child patient needs a different approach than an adult — more time, more patience and an environment where they won't be afraid.",
+          "We treat children from their first milk teeth. We teach them that the dentist is nothing to be afraid of. For the youngest or anxious patients we offer treatment with nitrous oxide, which helps manage fear without general anaesthesia."
+        ],
+        "cta": "Book your child for a check-up"
+      },
+      {
+        "id": "beleni",
+        "title": "Teeth whitening",
+        "photoAlt": "whitening photo",
+        "paragraphs": [
+          "Professional in-office whitening is safer and more effective than home kits from the drugstore. The result is visible but natural — it's not about porcelain white, but about your own shade without staining and discolouration.",
+          "Before whitening we recommend having a dental hygiene appointment — a clean tooth surface responds to whitening better."
+        ],
+        "cta": "Book a consultation"
+      },
+      {
+        "id": "klouby",
+        "title": "TMJ and joint treatment",
+        "photoAlt": "TMJ photo",
+        "paragraphs": [
+          "Jaw joint pain, clicking when opening the mouth, headaches originating in the jaw — these are problems that patients often ignore for a long time or try to resolve with other specialists.",
+          "We diagnose the cause of the difficulties and propose treatment — from occlusal splints to PRF therapy, which for joint and musculoskeletal problems (osteoarthritis, joint pain, tendinopathy) supports natural tissue regeneration."
+        ],
+        "cta": "Tell us what's bothering you"
+      },
+      {
+        "id": "ortodoncie",
+        "title": "Orthodontics",
+        "photoAlt": "orthodontics photo",
+        "paragraphs": [
+          "Braces and bite correction are provided in cooperation with an external orthodontist. If you need an assessment of whether orthodontic treatment is appropriate, start with a consultation here — based on the examination we will refer you to the specialist we have a long-term working relationship with."
+        ],
+        "cta": "Call and arrange a consultation"
+      }
+    ]
+  },
+  "onas": {
+    "meta": {
+      "title": "About us — Dentiyak dental clinic",
+      "description": "Meet the team at Dentiyak clinic in České Budějovice. Own laboratory, 3D X-ray, microscope, PRF therapy. MDDr. Nina Štěrbáková."
+    },
+    "header": {
+      "h1": "About us",
+      "sub": "We are a dental clinic where they have time for you. We work with equipment that lets us be precise, and with an approach that lets you be at ease."
+    },
+    "story": {
+      "h2": "How we work",
+      "paragraphs": [
+        "Dentiyak is a clinic built on a simple principle — do things properly and take the time for them. We don't chase patient numbers. Every treatment starts with a consultation where we go through what's needed together and propose a treatment plan with a clear price.",
+        "We have our own dental laboratory — crowns, bridges and prosthetic work are made in-house. That means shorter waiting times, direct communication with the technician and quality control from start to finish.",
+        "We work with a 3D X-ray, surgical microscope and intraoral scanner. We use PRF therapy — a regenerative method using the patient's own blood that supports healing after surgical procedures. And for patients who are anxious about treatment, we offer nitrous oxide."
+      ],
+      "photoAlt": "clinic interior photo"
+    },
+    "team": {
+      "label": "Your team",
+      "title": "The people who will take care of you",
+      "sub": "Photos and biographies to follow after the photo shoot.",
+      "members": [
+        { "name": "MDDr. Nina Štěrbáková", "role": "Dentist" },
+        { "name": "—", "role": "Dental hygienist" },
+        { "name": "—", "role": "Reception" }
+      ]
+    },
+    "equip": {
+      "title": "What we work with",
+      "cards": [
+        {
+          "title": "3D X-ray (CBCT)",
+          "text": "A three-dimensional image showing bone structure, the position of nerves and roots. The basis for planning implants and surgical procedures."
+        },
+        {
+          "title": "Surgical microscope",
+          "text": "Magnification that allows you to see details invisible to the naked eye. More precise work, smaller interventions."
+        },
+        {
+          "title": "Intraoral scanner",
+          "text": "Digital dental impression without unpleasant impression material. More precise, faster, more comfortable."
+        },
+        {
+          "title": "Own laboratory",
+          "text": "Crowns, bridges and prosthetic work made on-site — direct quality control, shorter waiting times."
+        },
+        {
+          "title": "PRF centrifuge",
+          "text": "Preparation of a concentrate from the patient's own blood to support natural healing after procedures."
+        }
+      ]
+    },
+    "insurance": {
+      "h2": "Contracted insurance companies",
+      "text": "For procedures covered by insurance you pay nothing. Non-standard treatment (implants, aesthetics, whitening, hygiene) is paid directly — we will tell you the price in advance after consultation.",
+      "tags": ["VZP (111)", "ČPZP (205)", "OZP (207)", "VoZP (201)", "ZPMV (211)"]
+    },
+    "cta": {
+      "title": "Would you like to meet us in person?",
+      "sub": "Call us — we'll arrange a first consultation where we go through what you need and propose a plan.",
+      "hours": "Mon–Fri 8:00–16:00"
+    }
+  },
+  "kontakt": {
+    "meta": {
+      "title": "Contact — Dentiyak dental clinic",
+      "description": "Contact Dentiyak clinic in České Budějovice. Phone +420 602 195 413, Krajinská 251/16. Mon–Fri 8:00–16:00. Accepting new patients."
+    },
+    "header": {
+      "h1": "Contact",
+      "sub": "You can arrange everything with one phone call. Reception is available every working day."
+    },
+    "contact": {
+      "phoneHeading": "Call us",
+      "hoursHeading": "Opening hours",
+      "addressHeading": "Where to find us",
+      "hours": [
+        { "day": "Monday", "time": "8:00 – 16:00" },
+        { "day": "Tuesday", "time": "8:00 – 16:00" },
+        { "day": "Wednesday", "time": "8:00 – 16:00" },
+        { "day": "Thursday", "time": "8:00 – 16:00" },
+        { "day": "Friday", "time": "8:00 – 16:00" },
+        { "day": "Saturday", "time": "Closed", "closed": true },
+        { "day": "Sunday", "time": "Closed", "closed": true }
+      ],
+      "addressLine1": "Krajinská 251/16",
+      "addressLine2": "370 01 České Budějovice",
+      "addressNote": "2nd floor, entrance next to Tesco",
+      "mapAlt": "Google Maps — Krajinská 251/16, České Budějovice"
+    },
+    "newPatients": {
+      "h2": "For new patients",
+      "paragraphs": [
+        "Is this your first visit? You don't need to prepare anything — just call.",
+        "Reception will ask for your name, phone number, insurance company and what you need to address. At the first visit the doctor will examine you, discuss your situation and propose a treatment plan with a price. No commitments — you decide once you have all the information.",
+        "New patients are welcome here."
+      ],
+      "cta": "Call and book an appointment"
+    },
+    "emergency": {
+      "h2": "Acute pain outside opening hours",
+      "intro": "If you are experiencing acute dental pain and our clinic is closed, contact the emergency dental service:",
+      "name": "Zubní pohotovost s.r.o.",
+      "address": "Lidická tř. 78, 370 01 České Budějovice",
+      "addressNote": "(České spořitelna building, entrance from Lidická street, 1st floor)",
+      "url": "www.zubnipohotovostcb.cz",
+      "hoursHeading": "Emergency opening hours:",
+      "hours1": "Mon–Fri: 16:00 – 22:00",
+      "hours2": "Sat, Sun, public holidays: 8:00 – 20:00"
+    },
+    "legalId": {
+      "h2": "Provider identification",
+      "text": "DENTIYAK s.r.o.\nCompany ID: 10670297 · VAT: CZ10670297\nKrajinská 251/16, České Budějovice 1, 370 01 České Budějovice\nRegistered in the Commercial Register maintained by the Regional Court in České Budějovice, Section C, Entry 30837"
+    },
+    "cta": {
+      "title": "Call us. We'll handle the rest.",
+      "sub": "Reception will help you find an appointment and answer basic questions before your visit.",
+      "hours": "Mon–Fri 8:00–16:00"
+    }
+  }
+}

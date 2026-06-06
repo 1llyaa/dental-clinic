@@ -74,12 +74,25 @@ document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
 const sections = document.querySelectorAll('.svc-block');
 const anchors  = document.querySelectorAll('.anchor-nav a');
+let clickLock = false;
+
+anchors.forEach(a => {
+  a.addEventListener('click', () => {
+    anchors.forEach(x => x.classList.remove('active'));
+    a.classList.add('active');
+    (a as HTMLElement).scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    clickLock = true;
+    setTimeout(() => { clickLock = false; }, 1200);
+  });
+});
+
 const anchorObserver = new IntersectionObserver((entries) => {
+  if (clickLock) return;
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       anchors.forEach(a => a.classList.remove('active'));
       const active = document.querySelector(`.anchor-nav a[href="#${entry.target.id}"]`);
-      if (active) { active.classList.add('active'); active.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); }
+      if (active) { active.classList.add('active'); (active as HTMLElement).scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); }
     }
   });
 }, { threshold: 0.2, rootMargin: '-140px 0px -60% 0px' });

@@ -19,13 +19,35 @@ const isActive = (path: string) => pathname === path || pathname.startsWith(path
   </div>
 </nav>
 
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <nav class="nav-overlay-links">
+    <a href="/sluzby" class:list={[{ active: isActive('/sluzby') }]}>{t.nav.services}</a>
+    <a href="/o-nas"  class:list={[{ active: isActive('/o-nas') }]}>{t.nav.about}</a>
+    <a href="/kontakt" class:list={[{ active: isActive('/kontakt') }]}>{t.nav.contact}</a>
+  </nav>
+  <a href={t.site.phoneLink} class="nav-overlay-phone">{t.site.phone}</a>
+</div>
+
 <script>
-const toggle = document.getElementById('nav-toggle');
-const links  = document.getElementById('nav-links');
-if (toggle && links) {
-  toggle.addEventListener('click', () => links.classList.toggle('open'));
-  toggle.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') links.classList.toggle('open');
-  });
+const toggle  = document.getElementById('nav-toggle');
+const overlay = document.getElementById('nav-overlay');
+
+function openMenu() {
+  overlay?.classList.add('open');
+  toggle?.classList.add('open');
+  overlay?.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
 }
+function closeMenu() {
+  overlay?.classList.remove('open');
+  toggle?.classList.remove('open');
+  overlay?.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+toggle?.addEventListener('click', () => overlay?.classList.contains('open') ? closeMenu() : openMenu());
+toggle?.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') overlay?.classList.contains('open') ? closeMenu() : openMenu();
+});
+overlay?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 </script>

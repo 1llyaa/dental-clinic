@@ -140,6 +140,55 @@ img { display: block; max-width: 100%; }
 }
 .nav-toggle { display: none; }
 
+/* ── FULLSCREEN MOBILE OVERLAY ── */
+.nav-overlay {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: #201c17;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--side-pad);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.nav-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.nav-overlay-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 0;
+}
+.nav-overlay-links a {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 11vw, 56px);
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.02em;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: color 0.2s;
+  line-height: 1.2;
+}
+.nav-overlay-links a:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.nav-overlay-links a:hover,
+.nav-overlay-links a.active { color: var(--taupe-300); }
+.nav-overlay-phone {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  padding: 1.5rem 0;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
 /* ── PAGE HEADER (inner pages) ── */
 .page-header {
   padding: 4rem 0 3rem;
@@ -1094,21 +1143,12 @@ img { display: block; max-width: 100%; }
     width: 22px;
     height: 1.5px;
     background: var(--taupe-600);
-    transition: all 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
   }
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: var(--bg-page);
-    border-bottom: 1px solid var(--border-light);
-    padding: 1.5rem var(--side-pad);
-    gap: 1rem;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
-  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   .nav-phone { display: none; }
 
   .hero { min-height: auto; padding: 3rem 0; }

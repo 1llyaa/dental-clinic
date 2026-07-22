@@ -858,6 +858,27 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.04em;
 }
 
+/* ── PHOTO FILL (real photos in placeholder boxes) ── */
+.hero-portrait:has(img),
+.why-card-photo:has(img),
+.svc-block-photo:has(img),
+.about-photo:has(img) {
+  border-style: solid;
+  padding: 0;
+  overflow: hidden;
+}
+.hero-portrait img,
+.why-card-photo img,
+.svc-card-photo img,
+.svc-block-photo img,
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
 /* ── EQUIPMENT (o-nas) ── */
 .equip {
   padding: 4rem 0;

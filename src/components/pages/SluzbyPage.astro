@@ -6,6 +6,19 @@ interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const t = getTranslations(locale);
 const s = t.sluzby;
+const svcPhotos: (string | null)[] = [
+  '/images/implantaty.jpg',
+  '/images/prf-centrifuga.jpg',
+  '/images/estetika.jpg',
+  '/images/hygiena.jpg',
+  '/images/rajsky-plyn-2.jpg',
+  '/images/zachovna.jpg',
+  '/images/chirurgie.jpg',
+  null,
+  '/images/beleni.jpg',
+  null,
+  null,
+];
 ---
 <Base title={s.meta.title} description={s.meta.description}>
 
@@ -24,7 +37,7 @@ const s = t.sluzby;
     </div>
   </div>
 
-  {s.services.map((svc) => (
+  {s.services.map((svc, i) => (
     <section class="svc-block" id={svc.id}>
       <div class="wrap">
         <div class="svc-block-inner fade-in">
@@ -47,7 +60,9 @@ const s = t.sluzby;
             {'note' in svc && <div class="svc-note">{(svc as any).note}</div>}
             <a href={t.site.phoneLink} class="svc-cta">{svc.cta}</a>
           </div>
-          <div class="svc-block-photo">{svc.photoAlt}</div>
+          <div class="svc-block-photo">
+            {svcPhotos[i] ? <img src={svcPhotos[i]!} alt={svc.photoAlt} loading="lazy" /> : svc.photoAlt}
+          </div>
         </div>
       </div>
     </section>

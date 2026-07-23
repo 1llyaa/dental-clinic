@@ -863,7 +863,7 @@ img { display: block; max-width: 100%; }
 .why-card-photo:has(img),
 .svc-block-photo:has(img),
 .about-photo:has(img) {
-  border-style: solid;
+  border: none;
   padding: 0;
   overflow: hidden;
 }

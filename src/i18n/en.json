@@ -105,9 +105,14 @@
       "title": "The people who will take care of you",
       "sub": "Photos and biographies to follow after the photo shoot.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Dentist" },
-        { "name": "—", "role": "Dental hygienist" },
-        { "name": "—", "role": "Reception" }
+        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist" },
+        { "name": "MDDr. Eva Richterová", "role": "Dentist" },
+        { "name": "MDDr. Alžběta Votrubová", "role": "Dentist" },
+        { "name": "Radka Paulusová", "role": "Dental Hygienist", "photo": "/images/radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková", "role": "Dental Hygienist" },
+        { "name": "Eva Kýčková", "role": "Dental Nurse" },
+        { "name": "Romana Parýzková", "role": "Dental Nurse" },
+        { "name": "Lucie Sluková", "role": "Dental Nurse" }
       ]
     },
     "faq": {
@@ -319,9 +324,14 @@
       "title": "The people who will take care of you",
       "sub": "Photos and biographies to follow after the photo shoot.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Dentist" },
-        { "name": "—", "role": "Dental hygienist" },
-        { "name": "—", "role": "Reception" }
+        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist" },
+        { "name": "MDDr. Eva Richterová", "role": "Dentist" },
+        { "name": "MDDr. Alžběta Votrubová", "role": "Dentist" },
+        { "name": "Radka Paulusová", "role": "Dental Hygienist", "photo": "/images/radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková", "role": "Dental Hygienist" },
+        { "name": "Eva Kýčková", "role": "Dental Nurse" },
+        { "name": "Romana Parýzková", "role": "Dental Nurse" },
+        { "name": "Lucie Sluková", "role": "Dental Nurse" }
       ]
     },
     "equip": {

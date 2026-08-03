@@ -1,30 +1,39 @@
 ---
-import { getTranslations } from '../i18n/utils';
-const t = getTranslations('cs');
+import { getTranslations, type Locale } from '../i18n/utils';
+import LangSwitch from './LangSwitch.astro';
+
+interface Props { locale?: Locale; }
+const { locale = 'cs' } = Astro.props;
+const t = getTranslations(locale);
+const prefix = locale === 'cs' ? '' : `/${locale}`;
 const pathname = Astro.url.pathname;
 const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
 ---
 <nav class="nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">{t.nav.logo}</a>
+    <a href={prefix || '/'} class="nav-logo">{t.nav.logo}</a>
     <div class="nav-toggle" id="nav-toggle" aria-label="Menu" role="button" tabindex="0">
       <span></span><span></span><span></span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="/sluzby" class:list={[{ active: isActive('/sluzby') }]}>{t.nav.services}</a>
-      <a href="/o-nas"  class:list={[{ active: isActive('/o-nas') }]}>{t.nav.about}</a>
-      <a href="/kontakt" class:list={[{ active: isActive('/kontakt') }]}>{t.nav.contact}</a>
+      <a href={`${prefix}/sluzby`} class:list={[{ active: isActive(`${prefix}/sluzby`) }]}>{t.nav.services}</a>
+      <a href={`${prefix}/o-nas`}  class:list={[{ active: isActive(`${prefix}/o-nas`) }]}>{t.nav.about}</a>
+      <a href={`${prefix}/kontakt`} class:list={[{ active: isActive(`${prefix}/kontakt`) }]}>{t.nav.contact}</a>
     </div>
-    <a href={t.site.phoneLink} class="nav-phone">{t.site.phone}</a>
+    <div class="nav-actions">
+      <LangSwitch locale={locale} class="nav-lang" />
+      <a href={t.site.phoneLink} class="nav-phone">{t.site.phone}</a>
+    </div>
   </div>
 </nav>
 
 <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
   <nav class="nav-overlay-links">
-    <a href="/sluzby" class:list={[{ active: isActive('/sluzby') }]}>{t.nav.services}</a>
-    <a href="/o-nas"  class:list={[{ active: isActive('/o-nas') }]}>{t.nav.about}</a>
-    <a href="/kontakt" class:list={[{ active: isActive('/kontakt') }]}>{t.nav.contact}</a>
+    <a href={`${prefix}/sluzby`} class:list={[{ active: isActive(`${prefix}/sluzby`) }]}>{t.nav.services}</a>
+    <a href={`${prefix}/o-nas`}  class:list={[{ active: isActive(`${prefix}/o-nas`) }]}>{t.nav.about}</a>
+    <a href={`${prefix}/kontakt`} class:list={[{ active: isActive(`${prefix}/kontakt`) }]}>{t.nav.contact}</a>
   </nav>
+  <LangSwitch locale={locale} class="nav-overlay-lang" />
   <a href={t.site.phoneLink} class="nav-overlay-phone">{t.site.phone}</a>
 </div>
 

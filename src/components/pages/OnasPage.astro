@@ -7,7 +7,7 @@ const { locale } = Astro.props;
 const t = getTranslations(locale);
 const o = t.onas;
 ---
-<Base title={o.meta.title} description={o.meta.description}>
+<Base title={o.meta.title} description={o.meta.description} locale={locale}>
 
   <section class="page-header">
     <div class="wrap">
@@ -36,7 +36,7 @@ const o = t.onas;
       <div class="team-grid">
         {o.team.members.map((member, i) => (
           <div class="fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
-            <div class="team-card-photo">foto</div>
+            <div class="team-card-photo">{member.photo ? <img src={member.photo} alt={member.name} loading="lazy" /> : 'foto'}</div>
             <div class="team-card-info">
               <div class="team-card-name">{member.name}</div>
               <div class="team-card-role">{member.role}</div>

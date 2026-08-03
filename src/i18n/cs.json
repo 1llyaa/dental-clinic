@@ -105,9 +105,14 @@
       "title": "Lidé, o které se postaráte",
       "sub": "Fotografie a biografie doplníme po fotografickém ateliéru.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Zubní lékařka" },
-        { "name": "—", "role": "Dentální hygienistka" },
-        { "name": "—", "role": "Recepce" }
+        { "name": "MDDr. Nina Štěrbáková", "role": "Hlavní zubní lékařka" },
+        { "name": "MDDr. Eva Richterová", "role": "Zubní lékařka" },
+        { "name": "MDDr. Alžběta Votrubová", "role": "Zubní lékařka" },
+        { "name": "Radka Paulusová", "role": "Dentální hygienistka", "photo": "/images/radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková", "role": "Dentální hygienistka" },
+        { "name": "Eva Kýčková", "role": "Zdravotní sestra" },
+        { "name": "Romana Parýzková", "role": "Zdravotní sestra" },
+        { "name": "Lucie Sluková", "role": "Zdravotní sestra" }
       ]
     },
     "faq": {
@@ -319,9 +324,14 @@
       "title": "Lidé, o které se postaráte",
       "sub": "Fotografie a biografie doplníme po fotografickém ateliéru.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Zubní lékařka" },
-        { "name": "—", "role": "Dentální hygienistka" },
-        { "name": "—", "role": "Recepce" }
+        { "name": "MDDr. Nina Štěrbáková", "role": "Hlavní zubní lékařka" },
+        { "name": "MDDr. Eva Richterová", "role": "Zubní lékařka" },
+        { "name": "MDDr. Alžběta Votrubová", "role": "Zubní lékařka" },
+        { "name": "Radka Paulusová", "role": "Dentální hygienistka", "photo": "/images/radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková", "role": "Dentální hygienistka" },
+        { "name": "Eva Kýčková", "role": "Zdravotní sestra" },
+        { "name": "Romana Parýzková", "role": "Zdravotní sestra" },
+        { "name": "Lucie Sluková", "role": "Zdravotní sestra" }
       ]
     },
     "equip": {

@@ -1,11 +1,13 @@
 ---
-import { getTranslations } from '../i18n/utils';
-const t = getTranslations('cs');
+import { getTranslations, type Locale } from '../i18n/utils';
 
 interface Props {
   currentYear: number;
+  locale?: Locale;
 }
-const { currentYear } = Astro.props;
+const { currentYear, locale = 'cs' } = Astro.props;
+const t = getTranslations(locale);
+const prefix = locale === 'cs' ? '' : `/${locale}`;
 ---
 <footer class="footer">
   <div class="wrap">
@@ -19,13 +21,13 @@ const { currentYear } = Astro.props;
         </div>
       </div>
       <div class="footer-links">
-        <a href="/sluzby">{t.nav.services}</a>
-        <a href="/o-nas">{t.nav.about}</a>
-        <a href="/kontakt">{t.nav.contact}</a>
+        <a href={`${prefix}/sluzby`}>{t.nav.services}</a>
+        <a href={`${prefix}/o-nas`}>{t.nav.about}</a>
+        <a href={`${prefix}/kontakt`}>{t.nav.contact}</a>
       </div>
       <div class="footer-bottom">
         © {currentYear} DENTIYAK s.r.o.<br />
-        <a href="/ochrana-osobnich-udaju">{t.footer.gdpr}</a>
+        <a href={`${prefix}/ochrana-osobnich-udaju`}>{t.footer.gdpr}</a>
       </div>
     </div>
   </div>

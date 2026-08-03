@@ -7,7 +7,7 @@ const { locale } = Astro.props;
 const t = getTranslations(locale);
 const k = t.kontakt;
 ---
-<Base title={k.meta.title} description={k.meta.description}>
+<Base title={k.meta.title} description={k.meta.description} locale={locale}>
 
   <section class="page-header">
     <div class="wrap">
@@ -44,7 +44,14 @@ const k = t.kontakt;
           </div>
         </div>
         <div class="fade-in" style="animation-delay:0.15s">
-          <div class="map-placeholder">{k.contact.mapAlt}</div>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/d/u/1/embed?mid=16hd4Q2DBpQfH7EbOLrzV_YgObMLccNc&ehbc=2E312F&noprof=1"
+              title={k.contact.mapAlt}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>

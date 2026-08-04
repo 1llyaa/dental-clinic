@@ -1726,7 +1726,7 @@ img {
   .svc-grid {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
     scrollbar-width: none;
@@ -1747,7 +1747,7 @@ img {
   .proof-slider {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
     scrollbar-width: none;

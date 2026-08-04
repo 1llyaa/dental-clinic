@@ -93,10 +93,8 @@
       "tags": [
         { "id": "zachovna", "text": "Záchovná stomatologie" },
         { "id": "chirurgie", "text": "Stomatochirurgie" },
-        { "id": "deti", "text": "Pedostomatologie" },
         { "id": "beleni", "text": "Bělení zubů" },
         { "id": "rajsky-plyn", "text": "Rajský plyn" },
-        { "id": "klouby", "text": "Klouby / TMJ" },
         { "id": "ortodoncie", "text": "Ortodoncie" }
       ]
     },
@@ -168,9 +166,7 @@
       { "id": "rajsky-plyn", "text": "Rajský plyn", "priority": true },
       { "id": "zachovna", "text": "Záchovná", "priority": false },
       { "id": "chirurgie", "text": "Chirurgie", "priority": false },
-      { "id": "deti", "text": "Děti", "priority": false },
       { "id": "beleni", "text": "Bělení", "priority": false },
-      { "id": "klouby", "text": "Klouby", "priority": false },
       { "id": "ortodoncie", "text": "Ortodoncie", "priority": false }
     ],
     "cta": {
@@ -261,16 +257,6 @@
         "cta": "Zavolejte a domluvte konzultaci"
       },
       {
-        "id": "deti",
-        "title": "Zuby pro děti",
-        "photoAlt": "foto dětská stomatologie",
-        "paragraphs": [
-          "Dětský pacient potřebuje jiný přístup než dospělý — víc času, víc trpělivosti a prostředí, kde se nebude bát.",
-          "Ošetřujeme děti od prvních mléčných zubů. Učíme je, že zubař není něco, čeho se bojí. Pro nejmenší nebo úzkostné pacienty nabízíme ošetření s rajským plynem, který pomáhá zvládnout strach bez celkové anestezie."
-        ],
-        "cta": "Objednejte dítě na prohlídku"
-      },
-      {
         "id": "beleni",
         "title": "Bělení zubů",
         "photoAlt": "foto bělení",
@@ -279,16 +265,6 @@
           "Před bělením doporučujeme absolvovat dentální hygienu — čistý povrch zubu reaguje na bělení lépe."
         ],
         "cta": "Domluvte si konzultaci"
-      },
-      {
-        "id": "klouby",
-        "title": "Léčba kloubů a TMJ",
-        "photoAlt": "foto TMJ",
-        "paragraphs": [
-          "Bolesti čelistního kloubu, cvakání při otevírání úst, bolesti hlavy vycházející z čelisti — to jsou potíže, které pacienti často dlouho přehlížejí nebo řeší u jiných odborníků.",
-          "Diagnostikujeme příčinu obtíží a navrhujeme léčbu — od nákusných dlah po PRF terapii, která u kloubních a muskuloskeletálních potíží (osteoartróza, bolesti kloubů, tendinopatie) podporuje přirozenou regeneraci tkání."
-        ],
-        "cta": "Popište nám, co vás trápí"
       },
       {
         "id": "ortodoncie",

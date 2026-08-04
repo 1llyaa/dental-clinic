@@ -93,10 +93,8 @@
       "tags": [
         { "id": "zachovna", "text": "Conservative dentistry" },
         { "id": "chirurgie", "text": "Oral surgery" },
-        { "id": "deti", "text": "Paediatric dentistry" },
         { "id": "beleni", "text": "Teeth whitening" },
         { "id": "rajsky-plyn", "text": "Nitrous oxide" },
-        { "id": "klouby", "text": "Joints / TMJ" },
         { "id": "ortodoncie", "text": "Orthodontics" }
       ]
     },
@@ -168,9 +166,7 @@
       { "id": "rajsky-plyn", "text": "Nitrous oxide", "priority": true },
       { "id": "zachovna", "text": "Conservative", "priority": false },
       { "id": "chirurgie", "text": "Surgery", "priority": false },
-      { "id": "deti", "text": "Children", "priority": false },
       { "id": "beleni", "text": "Whitening", "priority": false },
-      { "id": "klouby", "text": "Joints", "priority": false },
       { "id": "ortodoncie", "text": "Orthodontics", "priority": false }
     ],
     "cta": {
@@ -261,16 +257,6 @@
         "cta": "Call and arrange a consultation"
       },
       {
-        "id": "deti",
-        "title": "Children's dentistry",
-        "photoAlt": "children's dentistry photo",
-        "paragraphs": [
-          "A child patient needs a different approach than an adult — more time, more patience and an environment where they won't be afraid.",
-          "We treat children from their first milk teeth. We teach them that the dentist is nothing to be afraid of. For the youngest or anxious patients we offer treatment with nitrous oxide, which helps manage fear without general anaesthesia."
-        ],
-        "cta": "Book your child for a check-up"
-      },
-      {
         "id": "beleni",
         "title": "Teeth whitening",
         "photoAlt": "whitening photo",
@@ -279,16 +265,6 @@
           "Before whitening we recommend having a dental hygiene appointment — a clean tooth surface responds to whitening better."
         ],
         "cta": "Book a consultation"
-      },
-      {
-        "id": "klouby",
-        "title": "TMJ and joint treatment",
-        "photoAlt": "TMJ photo",
-        "paragraphs": [
-          "Jaw joint pain, clicking when opening the mouth, headaches originating in the jaw — these are problems that patients often ignore for a long time or try to resolve with other specialists.",
-          "We diagnose the cause of the difficulties and propose treatment — from occlusal splints to PRF therapy, which for joint and musculoskeletal problems (osteoarthritis, joint pain, tendinopathy) supports natural tissue regeneration."
-        ],
-        "cta": "Tell us what's bothering you"
       },
       {
         "id": "ortodoncie",

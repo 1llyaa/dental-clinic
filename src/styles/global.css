@@ -323,9 +323,16 @@ img { display: block; max-width: 100%; }
 }
 .hero-bg {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--bg-page) 0%, var(--taupe-50) 50%, var(--bg-page) 100%);
+  inset: -20px;
+  background: url('/images/vybaveni.jpg') center/cover no-repeat;
+  filter: blur(14px);
   z-index: 0;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(250,248,244,0.85) 0%, rgba(238,231,216,0.78) 50%, rgba(250,248,244,0.85) 100%);
 }
 .hero-bg::after {
   content: '';
@@ -337,7 +344,6 @@ img { display: block; max-width: 100%; }
   background: radial-gradient(ellipse at center, rgba(154,139,110,0.08) 0%, transparent 70%);
 }
 .hero .wrap {
-  position: relative;
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 380px;
@@ -392,18 +398,11 @@ img { display: block; max-width: 100%; }
   font-style: italic;
 }
 .hero-portrait {
-  width: 100%;
-  aspect-ratio: 4/5;
-  background: var(--taupe-100);
-  border-radius: 6px;
-  border: 1px dashed var(--taupe-300);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  position: absolute;
+  right: var(--side-pad);
+  bottom: 0;
+  width: 320px;
+  z-index: 1;
 }
 
 /* ── WHY US ── */
@@ -591,7 +590,7 @@ img { display: block; max-width: 100%; }
 }
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 .team-card {
@@ -601,7 +600,7 @@ img { display: block; max-width: 100%; }
 }
 .team-card-photo {
   width: 100%;
-  aspect-ratio: 1/1.05;
+  aspect-ratio: 1/1;
   background: var(--taupe-700);
   border: 1px dashed var(--taupe-600);
   border-radius: 8px;
@@ -612,6 +611,17 @@ img { display: block; max-width: 100%; }
   color: var(--taupe-500);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  overflow: hidden;
+}
+.team-card-photo:has(img) {
+  border: none;
+}
+.team-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
 }
 .team-card-info { padding: 1rem 0 0; }
 .team-card-name {
@@ -960,7 +970,6 @@ img { display: block; max-width: 100%; }
 }
 
 /* ── PHOTO FILL (real photos in placeholder boxes) ── */
-.hero-portrait:has(img),
 .why-card-photo:has(img),
 .svc-block-photo:has(img),
 .about-photo:has(img) {
@@ -970,10 +979,8 @@ img { display: block; max-width: 100%; }
 }
 .hero-portrait img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   display: block;
-  border-radius: inherit;
 }
 .why-card-photo img,
 .svc-card-photo img,
@@ -1255,7 +1262,7 @@ img { display: block; max-width: 100%; }
 /* ── RESPONSIVE — tablet ── */
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero-portrait { max-width: 320px; margin: 0 auto; }
+  .hero-portrait { width: 260px; }
   .why-grid, .svc-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .cta-steps { flex-direction: column; align-items: center; gap: 1.5rem; }
@@ -1292,10 +1299,30 @@ img { display: block; max-width: 100%; }
   .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   .nav-actions { display: none; }
 
-  .hero { min-height: auto; padding: 3rem 0; }
+  .hero { min-height: auto; padding: 2.5rem 0 240px; }
   .hero-text h1 { font-size: 32px; }
+  .hero-portrait { left: 50%; right: auto; bottom: 0; transform: translateX(-50%); width: 170px; }
 
-  .why-grid, .svc-grid, .team-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+  /* horizontally swipeable service cards, next card peeking at the edge */
+  .svc-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 1rem;
+    margin: 0 -1.25rem 1.5rem;
+    padding: 0 1.25rem 0 2rem;
+    scroll-padding-left: 2rem;
+  }
+  .svc-grid::-webkit-scrollbar { display: none; }
+  .svc-card {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
   .equip-grid { grid-template-columns: 1fr; }
 
   .footer-inner { grid-template-columns: 1fr; }

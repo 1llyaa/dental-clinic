@@ -1,7 +1,9 @@
 {
   "site": {
     "phone": "+420 602 195 413",
-    "phoneLink": "tel:+420602195413"
+    "phoneLink": "tel:+420602195413",
+    "mapLink": "https://www.google.com/maps/d/u/1/embed?mid=16hd4Q2DBpQfH7EbOLrzV_YgObMLccNc&ehbc=2E312F&noprof=1",
+    "mapText": "Zobrazit na mapě"
   },
   "topbar": {
     "text": "Přijímáme nové pacienty —",
@@ -33,28 +35,22 @@
       "photoAlt": "foto doktorky"
     },
     "whyUs": {
-      "label": "Proč právě my",
-      "title": "Co nás odlišuje",
       "cards": [
         {
-          "photoAlt": "foto laboratoře",
-          "title": "Máme vlastní zubní laboratoř",
-          "text": "Zubní náhrady připravujeme interně — bez prodlev, kvalitu máme pod kontrolou od začátku do konce."
+          "title": "Vlastní laboratoř",
+          "text": "Korunky a fasety vznikají u nás v domě — kratší čekání, přesnější výsledek."
         },
         {
-          "photoAlt": "foto vybavení",
-          "title": "Vidíme víc, než vidíte vy",
-          "text": "Pracujeme s 3D rentgenem, mikroskopem a intraorálním skenerem. Správná diagnóza je základ."
+          "title": "Moderní vybavení",
+          "text": "3D rentgen, operační mikroskop a intraorální skener."
         },
         {
-          "photoAlt": "foto PRF",
-          "title": "Hojení z vlastní krve",
-          "text": "PRF terapie využívá vlastní krev pacienta pro přirozenou regeneraci tkání po výkonech."
+          "title": "PRF terapie",
+          "text": "Autologní regenerace z vlastní krve při implantacích a extrakcích."
         },
         {
-          "photoAlt": "foto rajský plyn",
-          "title": "Úzkost není překážka",
-          "text": "Pro pacienty, kteří se ošetření obávají, nabízíme sedaci rajským plynem."
+          "title": "Rajský plyn",
+          "text": "Sedace oxidem dusným pro pacienty, kteří potřebují víc klidu."
         }
       ]
     },
@@ -103,14 +99,28 @@
       "title": "Lidé, o které se postaráte",
       "sub": "Fotografie a biografie doplníme po fotografickém ateliéru.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Hlavní zubní lékařka" },
-        { "name": "MDDr. Eva Richterová", "role": "Zubní lékařka" },
+        { "name": "MDDr. Nina Štěrbáková", "role": "Hlavní zubní lékařka", "photo": "/images/nina-sterbakova.jpg" },
+        { "name": "MDDr. Eva Richterová", "role": "Zubní lékařka", "photo": "/images/eva-richterova.jpg" },
         { "name": "MDDr. Alžběta Votrubová", "role": "Zubní lékařka" },
-        { "name": "Radka Paulusová", "role": "Dentální hygienistka", "photo": "/images/radka-paulusova.jpg" },
-        { "name": "Natálie Barčáková", "role": "Dentální hygienistka" },
+        { "name": "Radka Paulusová, DiS.", "role": "Dentální hygienistka", "photo": "/images/radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková, DiS.", "role": "Dentální hygienistka", "photo": "/images/natalie-barcakova.jpg" },
         { "name": "Eva Kýčková", "role": "Zdravotní sestra" },
-        { "name": "Romana Parýzková", "role": "Zdravotní sestra" },
-        { "name": "Lucie Sluková", "role": "Zdravotní sestra" }
+        { "name": "Romana Parýzková", "role": "Zdravotní sestra", "photo": "/images/romana-paryzkova.jpg" },
+        { "name": "Lucie Sluková", "role": "Zdravotní sestra", "photo": "/images/lucie-slukova.jpg" }
+      ]
+    },
+    "reviews": {
+      "label": "Reference",
+      "title": "Co říkají naši pacienti.",
+      "sub": "Místo pro reálné hodnocení od pacientů — doplníme po sběru prvních recenzí z Googlu.",
+      "score": "4,9",
+      "count": "[N] hodnocení",
+      "googleMark": "Google recenze",
+      "cards": [
+        { "quote": "Zde bude citace pacienta z Google recenze.", "author": "Jméno pacienta" },
+        { "quote": "Zde bude citace pacienta z Google recenze.", "author": "Jméno pacienta" },
+        { "quote": "Zde bude citace pacienta z Google recenze.", "author": "Jméno pacienta" },
+        { "quote": "Zde bude citace pacienta z Google recenze.", "author": "Jméno pacienta" }
       ]
     },
     "faq": {
@@ -139,14 +149,10 @@
       ]
     },
     "cta": {
+      "label": "Objednání",
       "title": "Zavolejte. Zbytek zařídíme my.",
       "sub": "Recepce vám pomůže najít termín a odpoví na základní otázky ještě před návštěvou.",
-      "hours": "Po–Pá 8:00–16:00",
-      "steps": [
-        "Zavoláte — recepce je k dispozici celý pracovní den.",
-        "Domluví se termín, který vám vyhovuje.",
-        "Na místě vám lékař vysvětlí vše a navrhne plán léčby."
-      ]
+      "hours": "Po–Pá 8:00–16:00"
     }
   },
   "sluzby": {
@@ -170,6 +176,7 @@
       { "id": "ortodoncie", "text": "Ortodoncie", "priority": false }
     ],
     "cta": {
+      "label": "Objednání",
       "title": "Potřebujete poradit, kam začít?",
       "sub": "Zavolejte — recepce vám pomůže najít termín a zodpoví základní otázky ještě před návštěvou.",
       "hours": "Po–Pá 8:00–16:00"
@@ -300,14 +307,14 @@
       "title": "Lidé, o které se postaráte",
       "sub": "Fotografie a biografie doplníme po fotografickém ateliéru.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Hlavní zubní lékařka" },
-        { "name": "MDDr. Eva Richterová", "role": "Zubní lékařka" },
+        { "name": "MDDr. Nina Štěrbáková", "role": "Hlavní zubní lékařka", "photo": "/images/nina-sterbakova.jpg" },
+        { "name": "MDDr. Eva Richterová", "role": "Zubní lékařka", "photo": "/images/eva-richterova.jpg" },
         { "name": "MDDr. Alžběta Votrubová", "role": "Zubní lékařka" },
-        { "name": "Radka Paulusová", "role": "Dentální hygienistka", "photo": "/images/radka-paulusova.jpg" },
-        { "name": "Natálie Barčáková", "role": "Dentální hygienistka" },
+        { "name": "Radka Paulusová, DiS.", "role": "Dentální hygienistka", "photo": "/images/radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková, DiS.", "role": "Dentální hygienistka", "photo": "/images/natalie-barcakova.jpg" },
         { "name": "Eva Kýčková", "role": "Zdravotní sestra" },
-        { "name": "Romana Parýzková", "role": "Zdravotní sestra" },
-        { "name": "Lucie Sluková", "role": "Zdravotní sestra" }
+        { "name": "Romana Parýzková", "role": "Zdravotní sestra", "photo": "/images/romana-paryzkova.jpg" },
+        { "name": "Lucie Sluková", "role": "Zdravotní sestra", "photo": "/images/lucie-slukova.jpg" }
       ]
     },
     "equip": {
@@ -347,6 +354,7 @@
       ]
     },
     "cta": {
+      "label": "Objednání",
       "title": "Chcete nás poznat osobně?",
       "sub": "Zavolejte — domluvíme první konzultaci, kde projdeme, co potřebujete, a navrhneme plán.",
       "hours": "Po–Pá 8:00–16:00"
@@ -404,6 +412,7 @@
       "text": "DENTIYAK s.r.o.\nIČO: 10670297 · DIČ: CZ10670297\nKrajinská 251/16, České Budějovice 1, 370 01 České Budějovice\nZapsáno v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 30837"
     },
     "cta": {
+      "label": "Objednání",
       "title": "Zavolejte. Zbytek zařídíme my.",
       "sub": "Recepce vám pomůže najít termín a odpoví na základní otázky ještě před návštěvou.",
       "hours": "Po–Pá 8:00–16:00"

@@ -1,0 +1,34 @@
+---
+import { getTranslations, type Locale } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+  label: string;
+  title: string;
+  sub: string;
+  hours: string;
+}
+const { locale, label, title, sub, hours } = Astro.props;
+const t = getTranslations(locale);
+const emergency = t.kontakt.emergency;
+---
+<section class="cta-block">
+  <div class="wrap">
+    <div class="cta-label">{label}</div>
+    <h2>{title}</h2>
+    <p class="cta-sub">{sub}</p>
+    <a href={t.site.phoneLink} class="cta-phone">{t.site.phone}</a>
+    <div class="cta-meta">
+      <span>{hours}</span>
+      <span class="cta-meta-dot">·</span>
+      <span>{t.footer.legal2}</span>
+      <span class="cta-meta-dot">·</span>
+      <a href={t.site.mapLink} target="_blank" rel="noopener">{t.site.mapText}</a>
+    </div>
+    <div class="cta-divider"></div>
+    <p class="cta-emergency">
+      <strong>{emergency.h2}</strong><br />
+      {emergency.name} — {emergency.address} · {emergency.hours1}
+    </p>
+  </div>
+</section>

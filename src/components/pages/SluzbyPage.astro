@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import FinalCta from '../FinalCta.astro';
 import { getTranslations, type Locale } from '../../i18n/utils';
 
 interface Props { locale: Locale; }
@@ -66,14 +67,7 @@ const svcPhotos: (string | null)[] = [
     </section>
   ))}
 
-  <section class="cta-block">
-    <div class="wrap">
-      <h2>{s.cta.title}</h2>
-      <p class="cta-sub">{s.cta.sub}</p>
-      <a href={t.site.phoneLink} class="cta-phone">{t.site.phone}</a>
-      <div class="cta-hours">{s.cta.hours}</div>
-    </div>
-  </section>
+  <FinalCta locale={locale} label={s.cta.label} title={s.cta.title} sub={s.cta.sub} hours={s.cta.hours} />
 
 </Base>
 

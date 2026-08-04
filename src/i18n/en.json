@@ -1,7 +1,9 @@
 {
   "site": {
     "phone": "+420 602 195 413",
-    "phoneLink": "tel:+420602195413"
+    "phoneLink": "tel:+420602195413",
+    "mapLink": "https://www.google.com/maps/d/u/1/embed?mid=16hd4Q2DBpQfH7EbOLrzV_YgObMLccNc&ehbc=2E312F&noprof=1",
+    "mapText": "View on map"
   },
   "topbar": {
     "text": "Accepting new patients —",
@@ -33,28 +35,22 @@
       "photoAlt": "doctor photo"
     },
     "whyUs": {
-      "label": "Why us",
-      "title": "What sets us apart",
       "cards": [
         {
-          "photoAlt": "laboratory photo",
-          "title": "We have our own dental laboratory",
-          "text": "We prepare dental prosthetics in-house — no delays, we control quality from start to finish."
+          "title": "Our own laboratory",
+          "text": "Crowns and veneers are made in-house — shorter waiting times, more precise results."
         },
         {
-          "photoAlt": "equipment photo",
-          "title": "We see more than you do",
-          "text": "We work with a 3D X-ray, microscope and intraoral scanner. The right diagnosis is everything."
+          "title": "Modern equipment",
+          "text": "3D X-ray, surgical microscope and intraoral scanner."
         },
         {
-          "photoAlt": "PRF photo",
-          "title": "Healing from your own blood",
-          "text": "PRF therapy uses the patient's own blood for natural tissue regeneration after procedures."
+          "title": "PRF therapy",
+          "text": "Autologous regeneration from your own blood for implants and extractions."
         },
         {
-          "photoAlt": "nitrous oxide photo",
-          "title": "Anxiety is not an obstacle",
-          "text": "For patients who are afraid of treatment, we offer sedation with nitrous oxide."
+          "title": "Nitrous oxide",
+          "text": "Sedation with nitrous oxide for patients who need a little more calm."
         }
       ]
     },
@@ -103,14 +99,28 @@
       "title": "The people who will take care of you",
       "sub": "Photos and biographies to follow after the photo shoot.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist" },
-        { "name": "MDDr. Eva Richterová", "role": "Dentist" },
+        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist", "photo": "/images/nina-sterbakova.jpg" },
+        { "name": "MDDr. Eva Richterová", "role": "Dentist", "photo": "/images/eva-richterova.jpg" },
         { "name": "MDDr. Alžběta Votrubová", "role": "Dentist" },
-        { "name": "Radka Paulusová", "role": "Dental Hygienist", "photo": "/images/radka-paulusova.jpg" },
-        { "name": "Natálie Barčáková", "role": "Dental Hygienist" },
+        { "name": "Radka Paulusová, DiS.", "role": "Dental Hygienist", "photo": "/images/radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková, DiS.", "role": "Dental Hygienist", "photo": "/images/natalie-barcakova.jpg" },
         { "name": "Eva Kýčková", "role": "Dental Nurse" },
-        { "name": "Romana Parýzková", "role": "Dental Nurse" },
-        { "name": "Lucie Sluková", "role": "Dental Nurse" }
+        { "name": "Romana Parýzková", "role": "Dental Nurse", "photo": "/images/romana-paryzkova.jpg" },
+        { "name": "Lucie Sluková", "role": "Dental Nurse", "photo": "/images/lucie-slukova.jpg" }
+      ]
+    },
+    "reviews": {
+      "label": "Reviews",
+      "title": "What our patients say.",
+      "sub": "A place for real patient reviews — we'll add these once we've collected the first Google reviews.",
+      "score": "4.9",
+      "count": "[N] reviews",
+      "googleMark": "Google reviews",
+      "cards": [
+        { "quote": "A patient quote from a Google review will go here.", "author": "Patient name" },
+        { "quote": "A patient quote from a Google review will go here.", "author": "Patient name" },
+        { "quote": "A patient quote from a Google review will go here.", "author": "Patient name" },
+        { "quote": "A patient quote from a Google review will go here.", "author": "Patient name" }
       ]
     },
     "faq": {
@@ -139,14 +149,10 @@
       ]
     },
     "cta": {
+      "label": "Booking",
       "title": "Call us. We'll handle the rest.",
       "sub": "Reception will help you find an appointment and answer basic questions before your visit.",
-      "hours": "Mon–Fri 8:00–16:00",
-      "steps": [
-        "You call — reception is available all working day.",
-        "An appointment that suits you is arranged.",
-        "On the day, the doctor explains everything and proposes a treatment plan."
-      ]
+      "hours": "Mon–Fri 8:00–16:00"
     }
   },
   "sluzby": {
@@ -170,6 +176,7 @@
       { "id": "ortodoncie", "text": "Orthodontics", "priority": false }
     ],
     "cta": {
+      "label": "Booking",
       "title": "Need advice on where to start?",
       "sub": "Call us — reception will help you find an appointment and answer basic questions before your visit.",
       "hours": "Mon–Fri 8:00–16:00"
@@ -300,14 +307,14 @@
       "title": "The people who will take care of you",
       "sub": "Photos and biographies to follow after the photo shoot.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist" },
-        { "name": "MDDr. Eva Richterová", "role": "Dentist" },
+        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist", "photo": "/images/nina-sterbakova.jpg" },
+        { "name": "MDDr. Eva Richterová", "role": "Dentist", "photo": "/images/eva-richterova.jpg" },
         { "name": "MDDr. Alžběta Votrubová", "role": "Dentist" },
-        { "name": "Radka Paulusová", "role": "Dental Hygienist", "photo": "/images/radka-paulusova.jpg" },
-        { "name": "Natálie Barčáková", "role": "Dental Hygienist" },
+        { "name": "Radka Paulusová, DiS.", "role": "Dental Hygienist", "photo": "/images/radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková, DiS.", "role": "Dental Hygienist", "photo": "/images/natalie-barcakova.jpg" },
         { "name": "Eva Kýčková", "role": "Dental Nurse" },
-        { "name": "Romana Parýzková", "role": "Dental Nurse" },
-        { "name": "Lucie Sluková", "role": "Dental Nurse" }
+        { "name": "Romana Parýzková", "role": "Dental Nurse", "photo": "/images/romana-paryzkova.jpg" },
+        { "name": "Lucie Sluková", "role": "Dental Nurse", "photo": "/images/lucie-slukova.jpg" }
       ]
     },
     "equip": {
@@ -341,6 +348,7 @@
       "tags": ["VZP (111)", "ČPZP (205)", "OZP (207)", "VoZP (201)", "ZPMV (211)"]
     },
     "cta": {
+      "label": "Booking",
       "title": "Would you like to meet us in person?",
       "sub": "Call us — we'll arrange a first consultation where we go through what you need and propose a plan.",
       "hours": "Mon–Fri 8:00–16:00"
@@ -398,6 +406,7 @@
       "text": "DENTIYAK s.r.o.\nCompany ID: 10670297 · VAT: CZ10670297\nKrajinská 251/16, České Budějovice 1, 370 01 České Budějovice\nRegistered in the Commercial Register maintained by the Regional Court in České Budějovice, Section C, Entry 30837"
     },
     "cta": {
+      "label": "Booking",
       "title": "Call us. We'll handle the rest.",
       "sub": "Reception will help you find an appointment and answer basic questions before your visit.",
       "hours": "Mon–Fri 8:00–16:00"

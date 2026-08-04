@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import FinalCta from '../FinalCta.astro';
 import { getTranslations, type Locale } from '../../i18n/utils';
 
 interface Props { locale: Locale; }
@@ -95,14 +96,7 @@ const k = t.kontakt;
     </div>
   </section>
 
-  <section class="cta-block">
-    <div class="wrap">
-      <h2>{k.cta.title}</h2>
-      <p class="cta-sub">{k.cta.sub}</p>
-      <a href={t.site.phoneLink} class="cta-phone">{t.site.phone}</a>
-      <div class="cta-hours">{k.cta.hours}</div>
-    </div>
-  </section>
+  <FinalCta locale={locale} label={k.cta.label} title={k.cta.title} sub={k.cta.sub} hours={k.cta.hours} />
 
 </Base>
 

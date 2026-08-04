@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import FinalCta from '../FinalCta.astro';
 import { getTranslations, type Locale } from '../../i18n/utils';
 
 interface Props { locale: Locale; }
@@ -30,17 +31,16 @@ const prefix = locale === 'cs' ? '' : `/${locale}`;
 
   <section class="why-us">
     <div class="wrap">
-      <div class="section-label">{h.whyUs.label}</div>
-      <h2 class="section-title">{h.whyUs.title}</h2>
-      <div class="why-grid">
+      <div class="why-strip">
         {h.whyUs.cards.map((card, i) => (
-          <div class="why-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
-            <div class="why-card-photo"><img src={['/images/laborator.jpg', '/images/vybaveni.jpg', '/images/prf-centrifuga.jpg', '/images/rajsky-plyn.jpg'][i]} alt={card.photoAlt} loading="lazy" /></div>
-            <div class="why-card-body">
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </div>
-          </div>
+          <article class="why-item fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
+            {i === 0 && <svg class="why-item-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10l-6 12a3 3 0 0 0 2.7 4.3h14.6A3 3 0 0 0 26 26L20 14V4" /><path d="M10 4h12" /><path d="M11 18h10" /></svg>}
+            {i === 1 && <svg class="why-item-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="13" r="7" /><circle cx="16" cy="13" r="3" /><path d="M16 20v8" /><path d="M11 28h10" /></svg>}
+            {i === 2 && <svg class="why-item-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c-4 6-7 10-7 14a7 7 0 0 0 14 0c0-4-3-8-7-14z" /><path d="M12 18a4 4 0 0 0 4 4" /></svg>}
+            {i === 3 && <svg class="why-item-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18c0-4 3-7 7-7h6c4 0 7 3 7 7s-3 7-7 7H13c-4 0-7-3-7-7z" /><path d="M11 18h10" /><path d="M4 14c2-2 4-2 6 0" /></svg>}
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </article>
         ))}
       </div>
     </div>
@@ -77,13 +77,46 @@ const prefix = locale === 'cs' ? '' : `/${locale}`;
       <div class="team-grid">
         {h.team.members.map((member, i) => (
           <div class="team-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
-            <div class="team-card-photo">{member.photo ? <img src={member.photo} alt={member.name} loading="lazy" /> : 'foto'}</div>
+            <div class="team-card-photo"><img src={member.photo ?? '/images/person-placeholder.png'} alt={member.name} loading="lazy" /></div>
             <div class="team-card-info">
               <div class="team-card-name">{member.name}</div>
               <div class="team-card-role">{member.role}</div>
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <div class="section-label">{h.reviews.label}</div>
+      <h2 class="section-title">{h.reviews.title}</h2>
+      <p class="section-sub">{h.reviews.sub}</p>
+      <div class="proof-layout">
+        <div class="proof-aggregate">
+          <div class="proof-score">{h.reviews.score}</div>
+          <div class="proof-stars" aria-hidden="true">
+            {[...Array(5)].map(() => (
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            ))}
+          </div>
+          <div class="proof-count">{h.reviews.count}</div>
+          <div class="proof-google-mark">{h.reviews.googleMark}</div>
+        </div>
+        <div class="proof-slider">
+          {h.reviews.cards.map((card) => (
+            <article class="proof-card">
+              <div class="proof-stars" aria-hidden="true">
+                {[...Array(5)].map(() => (
+                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+                ))}
+              </div>
+              <p class="proof-quote">„{card.quote}“</p>
+              <div class="proof-author"><span class="proof-avatar" aria-hidden="true"></span>{card.author}</div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -104,22 +137,7 @@ const prefix = locale === 'cs' ? '' : `/${locale}`;
     </div>
   </section>
 
-  <section class="cta-block">
-    <div class="wrap">
-      <h2>{h.cta.title}</h2>
-      <p class="cta-sub">{h.cta.sub}</p>
-      <a href={t.site.phoneLink} class="cta-phone">{t.site.phone}</a>
-      <div class="cta-hours">{h.cta.hours}</div>
-      <div class="cta-steps">
-        {h.cta.steps.map((step, i) => (
-          <div class="cta-step">
-            <div class="cta-step-num">{i + 1}</div>
-            <div class="cta-step-text">{step}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <FinalCta locale={locale} label={h.cta.label} title={h.cta.title} sub={h.cta.sub} hours={h.cta.hours} />
 
 </Base>
 

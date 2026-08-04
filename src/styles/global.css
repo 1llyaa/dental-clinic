@@ -35,9 +35,9 @@
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
 
-  --cta-base: #2E8B57;
-  --cta-hover: #256E46;
-  --cta-active: #1C5535;
+  --cta-base: #2e8b57;
+  --cta-hover: #256e46;
+  --cta-active: #1c5535;
 
   --max-w: 1120px;
   --side-pad: 2rem;
@@ -406,11 +406,11 @@ img {
 }
 .hero-bg {
   position: absolute;
-  inset: -20px;
+  inset: 0;
   background: url("/images/vybaveni.jpg") center/cover no-repeat;
   filter: blur(1px);
   opacity: 0.8;
-  transform: scaleX(-1);
+  transform: scale(1.2);
   z-index: 0;
 }
 .hero-bg::before {
@@ -423,7 +423,6 @@ img {
     rgba(238, 231, 216, 0.78) 50%,
     rgba(250, 248, 244, 0.85) 100%
   );
-  transform: scaleX(-1);
 }
 .hero-bg::after {
   content: "";
@@ -437,7 +436,6 @@ img {
     rgba(154, 139, 110, 0.08) 0%,
     transparent 70%
   );
-  transform: scaleX(-1);
 }
 .hero .wrap {
   z-index: 1;

@@ -33,7 +33,13 @@ const svcCardImages = [implantatyImg, prfCentrifugaImg, estetikaImg, hygienaImg]
         </a>
         <div class="hero-support">{h.hero.support}</div>
       </div>
-      <div class="hero-portrait"><Image src={heroDoktorka} alt={h.hero.photoAlt} loading="eager" /></div>
+      <div class="hero-portrait">
+        <Image src={heroDoktorka} alt={h.hero.photoAlt} loading="eager" />
+        <div class="hero-badge">
+          <strong>{h.hero.doctorName}</strong>
+          <span>{h.hero.doctorRole}</span>
+        </div>
+      </div>
     </div>
   </section>
 

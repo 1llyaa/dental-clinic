@@ -1,0 +1,1144 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dentiyak — stomatologická klinika</title>
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <rect width="100" height="100" fill="#9a8b6e"/>
+      <text x="50" y="58" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#f5f0e8" letter-spacing="2">D</text>
+    </svg>
+  </template>
+  <meta name="description" content="Stomatologická klinika Dentiyak — moderní vybavení, vlastní laboratoř, PRF terapie a klidné prostředí. Péče, ke které se rádi vracíte." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/dentiyak.css" />
+  <style>
+    /* ───────── Homepage-specific styles ───────── */
+
+    /* Hero */
+    .hero { min-height: 720px; padding: 0; }
+    .hero-inner {
+      position: relative; z-index: 2;
+      max-width: var(--container-wide);
+      margin: 0 auto;
+      padding: 80px var(--section-padding-x) 96px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .hero-copy .label { display: inline-block; margin-bottom: 28px; }
+    .hero-copy h1 {
+      font-size: 64px;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+      max-width: 14ch;
+    }
+    .hero-copy h1 em {
+      font-style: italic;
+      color: var(--taupe-600);
+    }
+    .hero-copy .lead {
+      font-size: var(--text-md);
+      line-height: 1.6;
+      max-width: 44ch;
+      color: var(--color-text-secondary);
+      margin-bottom: 40px;
+    }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .hero-ctas .support-text { margin-left: 8px; }
+    .hero-portrait {
+      aspect-ratio: 4 / 5;
+      max-height: 580px;
+      justify-self: end;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    /* Section heading block */
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: end;
+      margin-bottom: 56px;
+    }
+    .section-head .label { margin-bottom: 18px; display: block; }
+    .section-head h2 { font-size: 44px; line-height: 1.1; max-width: 14ch; }
+    .section-head p { font-size: var(--text-md); max-width: 52ch; }
+
+    /* Why us — USP strip (lighter weight than service cards) */
+    .why-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .why-item {
+      padding: 0 32px;
+      border-left: 0.5px solid var(--taupe-300);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .why-item:first-child { border-left: none; padding-left: 0; }
+    .why-item .icon { width: 22px; height: 22px; color: var(--taupe-500); }
+    .why-item h3 {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--color-text-primary);
+      text-transform: none;
+    }
+    .why-item p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+      margin: 0;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--color-bg-white);
+      border: 0.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card .card-photo-wrap { aspect-ratio: 2 / 1; }
+    .service-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .service-card h3 { font-size: 22px; line-height: 1.25; }
+    .service-card p { font-size: 14px; line-height: 1.6; }
+    .service-card .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .service-card .card-link::after {
+      content: "→";
+      transition: transform var(--transition-fast);
+    }
+    .service-card .card-link:hover::after { transform: translateX(3px); }
+
+    .all-services {
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 0.5px solid var(--color-border);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .all-services h4 {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+    }
+    .all-services ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 32px;
+    }
+    .all-services li {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding: 4px 0;
+      border-bottom: 0.5px dotted var(--color-border);
+    }
+    .all-services li a {
+      color: var(--taupe-600);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .all-services li a:hover { color: var(--color-text-primary); }
+
+    /* How it works */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+    .how-step h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 14px 0 8px;
+      color: var(--color-text-primary);
+    }
+    .how-step p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .how-step .step-rule {
+      width: 28px;
+      height: 1px;
+      background: var(--taupe-400);
+      margin: 18px 0 6px;
+    }
+
+    /* Team */
+    .team-section { color: var(--taupe-100); }
+    .team-section .label { color: var(--taupe-400); }
+    .team-section h2 { color: var(--taupe-100); }
+    .team-section .section-head p { color: var(--taupe-300); }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .team-card-photo { aspect-ratio: 12 / 11; }
+    .team-card-overlay {
+      padding: 28px 24px 22px;
+    }
+    .team-card-overlay .team-name { font-size: 22px; margin-bottom: 4px; }
+    .team-card-overlay .team-role { font-size: 13px; letter-spacing: 0.03em; }
+
+    /* FAQ */
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .faq-aside .label { display: block; margin-bottom: 14px; }
+    .faq-aside h2 { font-size: 40px; line-height: 1.1; margin-bottom: 18px; }
+    .faq-aside p { font-size: 15px; max-width: 32ch; }
+    .faq-list { display: flex; flex-direction: column; }
+    details.faq-item {
+      padding: 22px 0;
+      border-bottom: 0.5px solid var(--color-border);
+    }
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      transition: color var(--transition-fast);
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: "+";
+      font-family: var(--font-body);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--taupe-500);
+      transition: transform var(--transition-base);
+      line-height: 1;
+    }
+    details.faq-item[open] summary::after { transform: rotate(45deg); }
+    details.faq-item summary:hover { color: var(--taupe-700); }
+    details.faq-item .faq-answer {
+      padding: 14px 0 4px;
+      max-width: 60ch;
+    }
+
+    /* CTA block — phone */
+    .cta-block { padding: 96px 0; text-align: center; color: var(--taupe-100); }
+    .cta-block .label { color: var(--taupe-400); margin-bottom: 18px; display: inline-block; }
+    .cta-block h2 {
+      color: var(--taupe-100);
+      font-size: 48px;
+      line-height: 1.1;
+      max-width: 22ch;
+      margin: 0 auto 24px;
+    }
+    .cta-block p {
+      color: var(--taupe-300);
+      max-width: 50ch;
+      margin: 0 auto 40px;
+      font-size: var(--text-md);
+    }
+    .cta-block .phone-number {
+      display: block;
+      margin-bottom: 18px;
+      letter-spacing: 0.01em;
+    }
+    .cta-block .contact-meta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-family: var(--font-body);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--taupe-500);
+    }
+    .cta-block .contact-meta .dot { color: var(--taupe-700); }
+    .cta-block .contact-meta a { color: var(--taupe-500); }
+    .cta-block .contact-meta a:hover { color: var(--taupe-300); }
+    .cta-block .divider {
+      width: 40px; height: 1px;
+      background: var(--taupe-600);
+      margin: 48px auto;
+    }
+    .cta-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 780px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+    .cta-steps .step-number {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--taupe-500);
+      margin-bottom: 10px;
+    }
+    .cta-steps p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--taupe-300);
+      margin: 0;
+      max-width: none;
+    }
+    .cta-block .emergency {
+      font-size: 13px;
+      color: var(--taupe-400);
+      max-width: 50ch;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .cta-block .emergency strong {
+      color: var(--taupe-200);
+      font-weight: 500;
+    }
+    @media (max-width: 700px) {
+      .cta-steps { grid-template-columns: 1fr; gap: 28px; }
+      .cta-block .contact-meta { flex-direction: column; gap: 4px; }
+      .cta-block .contact-meta .dot { display: none; }
+    }
+
+    /* Footer expanded */
+    .footer {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 56px;
+      padding: 80px var(--section-padding-x) 40px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer-col h5 {
+      font-family: var(--font-body);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--taupe-500);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+    .footer-col p, .footer-col li {
+      font-size: 14px;
+      color: var(--taupe-400);
+      line-height: 1.75;
+    }
+    .footer-col a:hover { color: var(--taupe-200); }
+    .footer-brand .footer-logo { margin-bottom: 16px; display: block; }
+    .footer-brand p { max-width: 32ch; }
+    .footer-hours li { display: flex; justify-content: space-between; gap: 16px; }
+    .footer-hours li span:first-child { color: var(--taupe-300); }
+    .footer-bottom {
+      border-top: 0.5px solid var(--taupe-700);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-legal-line {
+      font-size: 12px;
+      color: var(--taupe-600);
+      line-height: 1.7;
+    }
+    .footer-legal-line a { color: var(--taupe-500); }
+
+    /* Topbar enhancements */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      max-width: var(--container-wide);
+      margin: 0 auto;
+      padding: 9px var(--section-padding-x);
+      background: transparent;
+    }
+    .topbar-wrap { background: var(--taupe-800); }
+    .topbar-wrap .topbar { color: var(--taupe-200); }
+    .topbar-left, .topbar-right { display: flex; gap: 24px; align-items: center; }
+    .topbar a { color: var(--taupe-200); }
+    .topbar a:hover { color: var(--taupe-50); }
+    .topbar .dot { color: var(--taupe-600); }
+
+    /* Nav refinements */
+    .nav { padding: 0 var(--section-padding-x); max-width: var(--container-wide); margin: 0 auto; }
+    .nav-wrap {
+      background: var(--color-bg-white);
+      border-bottom: 0.5px solid var(--color-border);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-links a { transition: color var(--transition-fast); }
+
+    /* Cookie banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      max-width: 520px;
+      margin: 0 auto;
+      background: var(--color-bg-white);
+      border: 0.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      padding: 20px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      z-index: 200;
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--color-text-secondary);
+    }
+    .cookie-banner .cookie-text { flex: 1; }
+    .cookie-banner a { color: var(--taupe-700); text-decoration: underline; text-decoration-thickness: 0.5px; text-underline-offset: 3px; }
+    .cookie-banner .cookie-actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .cookie-banner button {
+      font-family: var(--font-body);
+      font-size: 12px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      border: 0.5px solid var(--taupe-300);
+      background: transparent;
+      color: var(--taupe-700);
+      transition: background var(--transition-fast);
+    }
+    .cookie-banner button:hover { background: var(--taupe-50); }
+    .cookie-banner button.primary {
+      background: var(--taupe-700);
+      color: var(--taupe-100);
+      border-color: var(--taupe-700);
+    }
+    .cookie-banner button.primary:hover { background: var(--taupe-800); }
+    .cookie-banner.hidden { display: none; }
+
+    /* Responsive overrides */
+    /* Insurance strip — thin bar */
+    .insurance-strip {
+      padding: 18px 0;
+      border-top: 0.5px solid var(--color-border);
+      border-bottom: 0.5px solid var(--color-border);
+    }
+    .insurance-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .insurance-copy {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      white-space: nowrap;
+    }
+    .insurance-copy strong { color: var(--color-text-primary); font-weight: 500; }
+    .insurance-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .insurance-badge {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--taupe-700);
+    }
+    .insurance-badge:not(:last-child)::after {
+      content: "·";
+      margin-left: 10px;
+      color: var(--taupe-300);
+    }
+    @media (max-width: 700px) {
+      .insurance-copy { white-space: normal; }
+    }
+
+    /* Social proof — aggregate + slider */
+    .proof-layout {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .proof-aggregate {
+      padding-right: 40px;
+      border-right: 0.5px solid var(--color-border);
+    }
+    .proof-aggregate .score {
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 1;
+      color: var(--color-text-primary);
+    }
+    .proof-aggregate .proof-stars {
+      display: flex;
+      gap: 4px;
+      color: var(--taupe-500);
+      margin: 12px 0 10px;
+    }
+    .proof-aggregate .proof-stars svg { width: 16px; height: 16px; }
+    .proof-aggregate .proof-count {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+    }
+    .proof-aggregate .google-mark {
+      margin-top: 18px;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--taupe-500);
+    }
+    .proof-slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+    .proof-slider::-webkit-scrollbar { display: none; }
+    .proof-card {
+      background: var(--color-bg-white);
+      border: 0.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 0 0 340px;
+      scroll-snap-align: start;
+    }
+    .proof-card .proof-stars {
+      display: flex;
+      gap: 4px;
+      color: var(--taupe-500);
+    }
+    .proof-card .proof-stars svg { width: 14px; height: 14px; }
+    .proof-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 17px;
+      line-height: 1.5;
+      color: var(--color-text-primary);
+      flex: 1;
+    }
+    .proof-author {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .proof-author .avatar-dot {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--taupe-200);
+      flex-shrink: 0;
+    }
+    @media (max-width: 1024px) {
+      .proof-layout { grid-template-columns: 1fr; gap: 32px; }
+      .proof-aggregate {
+        border-right: none;
+        border-bottom: 0.5px solid var(--color-border);
+        padding-right: 0;
+        padding-bottom: 24px;
+      }
+      .proof-card { flex: 0 0 82%; }
+    }
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; padding: 64px var(--section-padding-x); }
+      .hero-portrait { justify-self: center; }
+      .hero-copy h1 { font-size: 52px; }
+      .why-strip { grid-template-columns: repeat(2, 1fr); gap: 28px 0; }
+      .why-item:nth-child(3) { border-left: none; padding-left: 0; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .how-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-grid { grid-template-columns: 1fr; }
+      .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+      .section-head { grid-template-columns: 1fr; gap: 24px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .all-services { grid-template-columns: 1fr; }
+      .all-services ul { grid-template-columns: 1fr; }
+      .topbar-left .hide-md { display: none; }
+    }
+    @media (max-width: 600px) {
+      .hero-copy h1 { font-size: 40px; }
+      .section-head h2, .faq-aside h2 { font-size: 30px; }
+      /* Convert services grid into scroll-snap slider on mobile */
+      .services-grid {
+        display: flex;
+        grid-template-columns: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 14px;
+        margin: 0 calc(-1 * var(--section-padding-x));
+        padding: 4px var(--section-padding-x) 18px;
+        scroll-padding-left: var(--section-padding-x);
+      }
+      .services-grid::-webkit-scrollbar { display: none; }
+      .service-card {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+      .why-strip { grid-template-columns: 1fr; gap: 20px; }
+      .why-item { border-left: none; padding-left: 0; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .cta-block h2 { font-size: 32px; }
+      .cta-block .phone-number { font-size: 38px; }
+      .topbar { font-size: 11px; gap: 12px; }
+      .topbar-right .hide-sm { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ───────── TOPBAR ───────── -->
+  <div class="topbar-wrap">
+    <div class="topbar">
+      <div class="topbar-left">
+        <span>Po–Pá 7.30–17.00</span>
+        <span class="dot">·</span>
+        <span class="hide-md">Recepce přijímá hovory celý den</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#kontakt" class="hide-sm">Adresa a mapa</a>
+        <span class="dot hide-sm">·</span>
+        <a href="tel:+420412345678">+420 412 345 678</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───────── NAVIGACE ───────── -->
+  <div class="nav-wrap">
+    <nav class="nav" aria-label="Hlavní">
+      <a href="/" class="nav-logo">Dentiyak</a>
+      <ul class="nav-links">
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#tym">Tým</a></li>
+        <li><a href="#novi-pacienti">Noví pacienti</a></li>
+        <li><a href="#faq">Časté dotazy</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <a href="tel:+420412345678" class="nav-cta">Zavolat</a>
+    </nav>
+  </div>
+
+  <!-- ───────── HERO ───────── -->
+  <header class="hero">
+    <img src="assets/img/hero-bg.jpg" alt="" class="hero-bg-media" aria-hidden="true" />
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-copy hero-content">
+        <span class="label">Stomatologická klinika · Praha</span>
+        <h1>Péče, ke&nbsp;které se rádi <em>vracíte.</em></h1>
+        <p class="lead">
+          Klidné prostředí, moderní vybavení a vlastní laboratoř.
+          Plán léčby vám sestavíme tak, aby vám dával smysl —
+          a abyste mu rozuměli po jednom kroku.
+        </p>
+        <div class="hero-ctas">
+          <a href="tel:+420412345678" class="btn btn--primary">Zavolejte 412 345 678</a>
+          <a href="#tym" class="btn btn--secondary">Poznejte tým</a>
+        </div>
+        <p class="support-text mt-3">Telefonujeme každý všední den, 7.30–17.00.</p>
+      </div>
+
+      <figure class="hero-portrait">
+        <img src="assets/img/hero-portrait.jpg" alt="MUDr. Hana Dentiyaková, vedoucí lékařka kliniky" />
+      </figure>
+    </div>
+  </header>
+
+  <!-- ───────── PROČ PRÁVĚ MY ───────── -->
+  <section class="section section-gradient-warm why-section" id="proc-my">
+    <div class="container--wide">
+      <div class="why-strip">
+        <article class="why-item">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 4v10l-6 12a3 3 0 0 0 2.7 4.3h14.6A3 3 0 0 0 26 26L20 14V4" />
+            <path d="M10 4h12" />
+            <path d="M11 18h10" />
+          </svg>
+          <h3>Vlastní laboratoř</h3>
+          <p>Korunky a fasety vznikají u nás v domě — kratší čekání, přesnější výsledek.</p>
+        </article>
+
+        <article class="why-item">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="16" cy="13" r="7" />
+            <circle cx="16" cy="13" r="3" />
+            <path d="M16 20v8" />
+            <path d="M11 28h10" />
+          </svg>
+          <h3>Moderní vybavení</h3>
+          <p>3D rentgen, operační mikroskop a intraorální skener.</p>
+        </article>
+
+        <article class="why-item">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 4c-4 6-7 10-7 14a7 7 0 0 0 14 0c0-4-3-8-7-14z" />
+            <path d="M12 18a4 4 0 0 0 4 4" />
+          </svg>
+          <h3>PRF terapie</h3>
+          <p>Autologní regenerace z vlastní krve při implantacích a extrakcích.</p>
+        </article>
+
+        <article class="why-item">
+          <svg class="icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 18c0-4 3-7 7-7h6c4 0 7 3 7 7s-3 7-7 7H13c-4 0-7-3-7-7z" />
+            <path d="M11 18h10" />
+            <path d="M4 14c2-2 4-2 6 0" />
+          </svg>
+          <h3>Rajský plyn</h3>
+          <p>Sedace oxidem dusným pro pacienty, kteří potřebují víc klidu.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SLUŽBY ───────── -->
+  <section class="section" id="sluzby">
+    <div class="container--wide">
+      <header class="section-head">
+        <div>
+          <span class="label">Naše péče</span>
+          <h2>Péče, kterou hledáte.</h2>
+        </div>
+        <p>
+          Jsme komplexní klinika — od dentální hygieny přes záchovnou
+          stomatologii až po implantologii a estetiku.
+          Co k vám sedí, společně určíme při vstupním vyšetření.
+        </p>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card photo-card">
+          <div class="card-photo-wrap">
+            <img src="assets/img/service-implant.jpg" alt="Zubní implantát, Dentiyak stomatologická klinika" class="card-photo" />
+          </div>
+          <div class="service-card-body">
+            <h3>Implantáty</h3>
+            <p>Náhrada chybějícího zubu, která drží desítky let. Komplexní vedení od plánu po finální korunku, včetně 3D rentgenu a vlastní laboratoře.</p>
+            <a href="#" class="card-link">Více o implantátech</a>
+          </div>
+        </article>
+
+        <article class="service-card photo-card">
+          <div class="card-photo-wrap">
+            <img src="assets/img/service-prf.jpg" alt="PRF terapie, autologní regenerace, Dentiyak" class="card-photo" />
+          </div>
+          <div class="service-card-body">
+            <h3>PRF terapie</h3>
+            <p>Autologní regenerace z vlastní krve, kterou doplňujeme k chirurgickým výkonům: extrakce, implantace, augmentace, sinus lift, parodontální regenerace.</p>
+            <a href="#" class="card-link">Více o PRF</a>
+          </div>
+        </article>
+
+        <article class="service-card photo-card">
+          <div class="card-photo-wrap">
+            <img src="assets/img/service-aesthetic.jpg" alt="Estetická stomatologie, Dentiyak" class="card-photo" />
+          </div>
+          <div class="service-card-body">
+            <h3>Estetická stomatologie</h3>
+            <p>Fasety, korunky, kompozitní rekonstrukce a šetrné bělení. Přirozený výsledek, který se hodí k vašemu obličeji — ne ke katalogu.</p>
+            <a href="#" class="card-link">Více o estetice</a>
+          </div>
+        </article>
+
+        <article class="service-card photo-card">
+          <div class="card-photo-wrap">
+            <img src="assets/img/service-hygiene.jpg" alt="Dentální hygiena, Dentiyak" class="card-photo" />
+          </div>
+          <div class="service-card-body">
+            <h3>Dentální hygiena</h3>
+            <p>Základ, na kterém stojí všechno ostatní. Doporučujeme dvakrát ročně — pro stávající i nové pacienty.</p>
+            <a href="#" class="card-link">Více o hygieně</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="all-services">
+        <h4>A&nbsp;dále se u&nbsp;nás věnujeme</h4>
+        <ul>
+          <li><span>Záchovná stomatologie</span><a href="#">Přečíst</a></li>
+          <li><span>Pedostomatologie (děti)</span><a href="#">Přečíst</a></li>
+          <li><span>Protetika</span><a href="#">Přečíst</a></li>
+          <li><span>Ortodoncie (spolupráce)</span><a href="#">Přečíst</a></li>
+          <li><span>Chirurgie a extrakce</span><a href="#">Přečíst</a></li>
+          <li><span>Léčba TMJ kloubů</span><a href="#">Přečíst</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── TÝM ───────── -->
+  <section class="section section-gradient-dark team-section" id="tym">
+    <div class="container--wide">
+      <header class="section-head">
+        <div>
+          <span class="label">Váš tým</span>
+          <h2>Lidé, kteří se o vás postarají.</h2>
+        </div>
+        <p>
+          Stálý tým, ne brigádníci. U&nbsp;nás potkáte stejné tváře
+          při hygieně i při ošetření — protože kontinuita péče má smysl.
+        </p>
+      </header>
+
+      <div class="team-grid">
+        <article class="team-card-photo">
+          <img src="assets/img/team-1.jpg" alt="MUDr. Hana Dentiyaková" />
+          <div class="team-card-overlay">
+            <div class="team-name">MUDr. Hana Dentiyaková</div>
+            <div class="team-role">Vedoucí lékařka · Implantologie</div>
+          </div>
+        </article>
+        <article class="team-card-photo">
+          <img src="assets/img/team-2.jpg" alt="MUDr. Petr Novák" />
+          <div class="team-card-overlay">
+            <div class="team-name">MUDr. Petr Novák</div>
+            <div class="team-role">Záchovná stomatologie · Endodoncie</div>
+          </div>
+        </article>
+        <article class="team-card-photo">
+          <img src="assets/img/team-3.jpg" alt="Klára Vávrová, recepce" />
+          <div class="team-card-overlay">
+            <div class="team-name">Klára Vávrová</div>
+            <div class="team-role">Recepce · Koordinace péče</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── JAK TO U NÁS PROBÍHÁ ───────── -->
+  <section class="section section--alt" id="novi-pacienti">
+    <div class="container--wide">
+      <header class="section-head">
+        <div>
+          <span class="label">Nový pacient</span>
+          <h2>Jak vypadá první návštěva.</h2>
+        </div>
+        <p>
+          Bez stresu, bez tlaku na okamžité rozhodnutí. Vždy nejdřív
+          zjistíme, co vás trápí — a pak vám představíme možnosti.
+        </p>
+      </header>
+
+      <div class="how-grid">
+        <article class="how-step">
+          <div class="step-number">01</div>
+          <div class="step-rule"></div>
+          <h3>Telefonát</h3>
+          <p>Krátký hovor s recepcí. Řekneme si, kdy máme volno a co si připravit.</p>
+        </article>
+        <article class="how-step">
+          <div class="step-number">02</div>
+          <div class="step-rule"></div>
+          <h3>Vstupní vyšetření</h3>
+          <p>Důkladná prohlídka, RTG dle potřeby, rozhovor o tom, co od péče čekáte.</p>
+        </article>
+        <article class="how-step">
+          <div class="step-number">03</div>
+          <div class="step-rule"></div>
+          <h3>Plán léčby</h3>
+          <p>Srozumitelný návrh kroků, časový rámec a finanční rozpočet — písemně.</p>
+        </article>
+        <article class="how-step">
+          <div class="step-number">04</div>
+          <div class="step-rule"></div>
+          <h3>Společná cesta</h3>
+          <p>Postupujeme tempem, které vám sedí. Bez zbytečných výkonů.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── POJIŠŤOVNY ───────── -->
+  <section class="insurance-strip">
+    <div class="container--wide insurance-inner">
+      <p class="insurance-copy"><strong>Smluvní zdravotní pojišťovny.</strong> Nadstandardní výkony (implantáty, estetika, bělení) hradíte přímo — cenu sdělíme předem po konzultaci.</p>
+      <div class="insurance-badges">
+        <span class="insurance-badge">VZP · 111</span>
+        <span class="insurance-badge">ČPZP · 205</span>
+        <span class="insurance-badge">OZP · 207</span>
+        <span class="insurance-badge">VoZP · 201</span>
+        <span class="insurance-badge">ZPMV · 211</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── REFERENCE ───────── -->
+  <section class="section" id="reference">
+    <div class="container--wide">
+      <header class="section-head">
+        <div>
+          <span class="label">Reference</span>
+          <h2>Co říkají naši pacienti.</h2>
+        </div>
+        <p>Místo pro reálné hodnocení od pacientů — doplníme po sběru prvních recenzí z Googlu.</p>
+      </header>
+
+      <div class="proof-layout">
+        <div class="proof-aggregate">
+          <div class="score">4,9</div>
+          <div class="proof-stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          </div>
+          <div class="proof-count">[N] hodnocení</div>
+          <div class="google-mark">Google recenze</div>
+        </div>
+
+        <div class="proof-slider">
+          <article class="proof-card">
+            <div class="proof-stars" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            </div>
+            <p class="proof-quote">„[Zde bude citace pacienta z Google recenze.]“</p>
+            <div class="proof-author"><span class="avatar-dot" aria-hidden="true"></span>[Jméno pacienta]</div>
+          </article>
+          <article class="proof-card">
+            <div class="proof-stars" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            </div>
+            <p class="proof-quote">„[Zde bude citace pacienta z Google recenze.]“</p>
+            <div class="proof-author"><span class="avatar-dot" aria-hidden="true"></span>[Jméno pacienta]</div>
+          </article>
+          <article class="proof-card">
+            <div class="proof-stars" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            </div>
+            <p class="proof-quote">„[Zde bude citace pacienta z Google recenze.]“</p>
+            <div class="proof-author"><span class="avatar-dot" aria-hidden="true"></span>[Jméno pacienta]</div>
+          </article>
+          <article class="proof-card">
+            <div class="proof-stars" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9 4.4 18l1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            </div>
+            <p class="proof-quote">„[Zde bude citace pacienta z Google recenze.]“</p>
+            <div class="proof-author"><span class="avatar-dot" aria-hidden="true"></span>[Jméno pacienta]</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FAQ ───────── -->
+  <section class="section" id="faq">
+    <div class="container--wide">
+      <div class="faq-layout">
+        <aside class="faq-aside">
+          <span class="label">Časté dotazy</span>
+          <h2>Než se rozhodnete zavolat.</h2>
+          <p>Pokud něco neodpovídáme, zavolejte — recepce vám ráda vysvětlí cokoli dalšího.</p>
+        </aside>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Berete nové pacienty?</summary>
+            <div class="faq-answer">
+              Kapacita je v tuto chvíli omezená a vedeme pořadník.
+              Při zájmu o vstupní vyšetření doporučujeme zavolat —
+              recepce vám sdělí aktuální čekací dobu a předběžně vás zapíše.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Pracujete se zdravotními pojišťovnami?</summary>
+            <div class="faq-answer">
+              Ano, máme smlouvy s VZP, ČPZP, OZP, VoZP a ZPMV.
+              Část výkonů (estetika, implantáty, nadstandardní materiály)
+              probíhá v režimu samoplátce — vše vám upřesníme v plánu léčby.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Co když mám z ošetření strach?</summary>
+            <div class="faq-answer">
+              Strach z&nbsp;ošetření patří k&nbsp;nejčastějším důvodům,
+              proč k nám pacienti přicházejí. Vyhradíme vám delší termín,
+              pracujeme v klidném tempu a v případě potřeby nabízíme sedaci
+              rajským plynem.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Proč nemáte na webu ceník?</summary>
+            <div class="faq-answer">
+              Každý zub i každý plán léčby je trochu jiný a obecný ceník
+              by mohl být zavádějící. Po vstupním vyšetření vám sestavíme
+              konkrétní rozpočet&nbsp;— srozumitelně, písemně, dopředu.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Co dělat při akutní bolesti mimo ordinační dobu?</summary>
+            <div class="faq-answer">
+              Mimo ordinační dobu se obracejte na pohotovostní stomatologickou
+              službu v&nbsp;Praze (Palackého 5, Praha 1 — nonstop).
+              V&nbsp;pracovní době vždy zkuste nejdřív zavolat na naše číslo
+              — pokud jste náš pacient, snažíme se ošetření vměstnat.
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── CTA — TELEFON ───────── -->
+  <section class="section section--dark cta-block" id="kontakt">
+    <div class="container">
+      <span class="label">Objednání</span>
+      <h2>Zavolejte. Zbytek zařídíme my.</h2>
+      <p>Recepce vám pomůže najít termín a odpoví na základní otázky ještě před návštěvou.</p>
+
+      <a href="tel:+420412345678" class="phone-number">+420&nbsp;412&nbsp;345&nbsp;678</a>
+      <div class="contact-meta">
+        <span>Po–Pá&nbsp;7.30–17.00</span>
+        <span class="dot">·</span>
+        <span>[Adresa kliniky], 110&nbsp;00 Praha&nbsp;1</span>
+        <span class="dot">·</span>
+        <a href="#" target="_blank" rel="noopener">Zobrazit na mapě</a>
+      </div>
+
+      <div class="divider" role="presentation"></div>
+
+      <p class="emergency">
+        <strong>Akutní bolest mimo ordinační dobu?</strong><br/>
+        Zubní pohotovost Praha — Palackého&nbsp;5, Praha&nbsp;1, nonstop&nbsp;·&nbsp;+420&nbsp;224&nbsp;946&nbsp;981
+      </p>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col footer-brand">
+        <span class="footer-logo">Dentiyak</span>
+        <p>Stomatologická klinika s vlastní laboratoří. Komplexní péče v klidném prostředí — od dentální hygieny po implantologii a PRF.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Klinika</h5>
+        <ul>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#tym">Náš tým</a></li>
+          <li><a href="#novi-pacienti">Noví pacienti</a></li>
+          <li><a href="#faq">Časté dotazy</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-hours">
+        <h5>Ordinační hodiny</h5>
+        <ul>
+          <li><span>Pondělí</span><span>7.30 – 17.00</span></li>
+          <li><span>Úterý</span><span>7.30 – 17.00</span></li>
+          <li><span>Středa</span><span>7.30 – 17.00</span></li>
+          <li><span>Čtvrtek</span><span>7.30 – 17.00</span></li>
+          <li><span>Pátek</span><span>7.30 – 14.00</span></li>
+          <li><span>Víkend</span><span>zavřeno</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <p>
+          [Adresa kliniky]<br/>
+          110 00 Praha 1<br/><br/>
+          <a href="tel:+420412345678">+420 412 345 678</a><br/>
+          <a href="mailto:recepce@dentiyak.cz">recepce@dentiyak.cz</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal-line">
+        Dentiyak s.r.o., stomatologická klinika · IČO [TBD] · Sídlo [TBD] ·
+        Zapsáno v OR vedeném [TBD soudem], oddíl [X], vložka [N]
+      </div>
+      <div class="footer-legal-line">
+        <a href="#">Ochrana osobních údajů</a> &nbsp;·&nbsp;
+        <a href="#">Nastavení cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ───────── COOKIE BANNER ───────── -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Souhlas s cookies">
+    <div class="cookie-text">
+      Používáme cookies pro analytiku návštěvnosti.
+      Více v&nbsp;<a href="#">Zásadách ochrany osobních údajů</a>.
+    </div>
+    <div class="cookie-actions">
+      <button type="button" onclick="document.getElementById('cookieBanner').classList.add('hidden')">Odmítnout</button>
+      <button type="button" class="primary" onclick="document.getElementById('cookieBanner').classList.add('hidden')">Přijmout</button>
+    </div>
+  </div>
+
+</body>
+</html>

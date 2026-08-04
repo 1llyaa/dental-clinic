@@ -2,6 +2,9 @@
   "site": {
     "phone": "+420 602 195 413",
     "phoneLink": "tel:+420602195413",
+    "email": "info@dentiyak.cz",
+    "emailLink": "mailto:info@dentiyak.cz",
+    "hours": "Po–Pá 8:00–16:00",
     "mapLink": "https://www.google.com/maps/d/u/1/embed?mid=16hd4Q2DBpQfH7EbOLrzV_YgObMLccNc&ehbc=2E312F&noprof=1",
     "mapText": "Zobrazit na mapě"
   },

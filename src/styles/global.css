@@ -35,6 +35,10 @@
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
 
+  --cta-base: #2E8B57;
+  --cta-hover: #256E46;
+  --cta-active: #1C5535;
+
   --max-w: 1120px;
   --side-pad: 2rem;
 }
@@ -160,8 +164,9 @@ img {
 }
 .nav-phone {
   font-size: 14px;
-  color: var(--taupe-600);
-  border: 1px solid var(--taupe-300);
+  color: white;
+  background: var(--cta-base);
+  border: 1px solid var(--cta-base);
   padding: 7px 18px;
   border-radius: 4px;
   font-weight: 500;
@@ -169,9 +174,12 @@ img {
   transition: all 0.2s;
 }
 .nav-phone:hover {
-  background: var(--taupe-500);
-  color: white;
-  border-color: var(--taupe-500);
+  background: var(--cta-hover);
+  border-color: var(--cta-hover);
+}
+.nav-phone:active {
+  background: var(--cta-active);
+  border-color: var(--cta-active);
 }
 .nav-toggle {
   display: none;
@@ -357,6 +365,11 @@ img {
   color: rgba(255, 255, 255, 0.35);
   letter-spacing: 0.06em;
 }
+.nav-overlay-hours {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.02em;
+}
 .nav-overlay-address {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.25);
@@ -453,8 +466,9 @@ img {
   align-items: center;
   gap: 10px;
   padding: 14px 32px;
-  border: 1.5px solid var(--taupe-500);
-  color: var(--taupe-600);
+  border: 1.5px solid var(--cta-base);
+  background: var(--cta-base);
+  color: white;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -463,9 +477,12 @@ img {
   cursor: pointer;
 }
 .hero-cta:hover {
-  background: var(--taupe-500);
-  color: white;
-  border-color: var(--taupe-500);
+  background: var(--cta-hover);
+  border-color: var(--cta-hover);
+}
+.hero-cta:active {
+  background: var(--cta-active);
+  border-color: var(--cta-active);
 }
 .hero-cta svg {
   width: 18px;
@@ -1145,17 +1162,21 @@ img {
   gap: 8px;
   margin-top: 1.5rem;
   padding: 10px 24px;
-  border: 1px solid var(--taupe-400);
-  color: var(--taupe-600);
+  border: 1px solid var(--cta-base);
+  background: var(--cta-base);
+  color: white;
   font-size: 14px;
   font-weight: 500;
   border-radius: 4px;
   transition: all 0.25s;
 }
 .svc-cta:hover {
-  background: var(--taupe-500);
-  color: white;
-  border-color: var(--taupe-500);
+  background: var(--cta-hover);
+  border-color: var(--cta-hover);
+}
+.svc-cta:active {
+  background: var(--cta-active);
+  border-color: var(--cta-active);
 }
 .svc-block-photo {
   width: 100%;
@@ -1464,17 +1485,21 @@ img {
   gap: 10px;
   margin-top: 0.5rem;
   padding: 12px 28px;
-  border: 1.5px solid var(--taupe-500);
-  color: var(--taupe-600);
+  border: 1.5px solid var(--cta-base);
+  background: var(--cta-base);
+  color: white;
   font-size: 15px;
   font-weight: 500;
   border-radius: 4px;
   transition: all 0.25s;
 }
 .new-patients-cta:hover {
-  background: var(--taupe-500);
-  color: white;
-  border-color: var(--taupe-500);
+  background: var(--cta-hover);
+  border-color: var(--cta-hover);
+}
+.new-patients-cta:active {
+  background: var(--cta-active);
+  border-color: var(--cta-active);
 }
 
 /* ── EMERGENCY (kontakt) ── */

@@ -36,7 +36,13 @@ const isActive = (path: string) => pathname === path || pathname.startsWith(path
   <LangSwitch locale={locale} class="nav-overlay-lang" />
   <div class="nav-overlay-contact">
     <a href={t.site.phoneLink} class="nav-overlay-phone">{t.site.phone}</a>
-    <span class="nav-overlay-address">{t.footer.legal2}</span>
+    <a href={t.site.emailLink} class="nav-overlay-phone">{t.site.email}</a>
+    <span class="nav-overlay-hours">{t.site.hours}</span>
+    <span class="nav-overlay-address">
+      {t.footer.legal1}<br />
+      {t.footer.legal2}<br />
+      {t.footer.legal3}
+    </span>
   </div>
 </div>
 

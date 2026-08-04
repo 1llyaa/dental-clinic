@@ -2,7 +2,6 @@
 import Base from '../../layouts/Base.astro';
 import FinalCta from '../FinalCta.astro';
 import { getTranslations, type Locale } from '../../i18n/utils';
-import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import implantatyImg from '../../images/implantaty.jpg';
 import prfCentrifugaImg from '../../images/prf-centrifuga.jpg';
@@ -70,7 +69,7 @@ const svcPhotos: (ImageMetadata | null)[] = [
             <a href={t.site.phoneLink} class="svc-cta">{svc.cta}</a>
           </div>
           <div class="svc-block-photo">
-            {svcPhotos[i] ? <Image src={svcPhotos[i]!} alt={svc.photoAlt} loading="lazy" /> : svc.photoAlt}
+            {svcPhotos[i] ? <img src={svcPhotos[i]!.src} width={svcPhotos[i]!.width} height={svcPhotos[i]!.height} alt={svc.photoAlt} loading="lazy" /> : svc.photoAlt}
           </div>
         </div>
       </div>

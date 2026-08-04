@@ -99,14 +99,14 @@
       "title": "The people who will take care of you",
       "sub": "Photos and biographies to follow after the photo shoot.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist", "photo": "/images/nina-sterbakova.jpg" },
-        { "name": "MDDr. Eva Richterová", "role": "Dentist", "photo": "/images/eva-richterova.jpg" },
+        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist", "photo": "nina-sterbakova.jpg" },
+        { "name": "MDDr. Eva Richterová", "role": "Dentist", "photo": "eva-richterova.jpg" },
         { "name": "MDDr. Alžběta Votrubová", "role": "Dentist" },
-        { "name": "Radka Paulusová, DiS.", "role": "Dental Hygienist", "photo": "/images/radka-paulusova.jpg" },
-        { "name": "Natálie Barčáková, DiS.", "role": "Dental Hygienist", "photo": "/images/natalie-barcakova.jpg" },
+        { "name": "Radka Paulusová, DiS.", "role": "Dental Hygienist", "photo": "radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková, DiS.", "role": "Dental Hygienist", "photo": "natalie-barcakova.jpg" },
         { "name": "Eva Kýčková", "role": "Dental Nurse" },
-        { "name": "Romana Parýzková", "role": "Dental Nurse", "photo": "/images/romana-paryzkova.jpg" },
-        { "name": "Lucie Sluková", "role": "Dental Nurse", "photo": "/images/lucie-slukova.jpg" }
+        { "name": "Romana Parýzková", "role": "Dental Nurse", "photo": "romana-paryzkova.jpg" },
+        { "name": "Lucie Sluková", "role": "Dental Nurse", "photo": "lucie-slukova.jpg" }
       ]
     },
     "reviews": {
@@ -307,14 +307,14 @@
       "title": "The people who will take care of you",
       "sub": "Photos and biographies to follow after the photo shoot.",
       "members": [
-        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist", "photo": "/images/nina-sterbakova.jpg" },
-        { "name": "MDDr. Eva Richterová", "role": "Dentist", "photo": "/images/eva-richterova.jpg" },
+        { "name": "MDDr. Nina Štěrbáková", "role": "Head Dentist", "photo": "nina-sterbakova.jpg" },
+        { "name": "MDDr. Eva Richterová", "role": "Dentist", "photo": "eva-richterova.jpg" },
         { "name": "MDDr. Alžběta Votrubová", "role": "Dentist" },
-        { "name": "Radka Paulusová, DiS.", "role": "Dental Hygienist", "photo": "/images/radka-paulusova.jpg" },
-        { "name": "Natálie Barčáková, DiS.", "role": "Dental Hygienist", "photo": "/images/natalie-barcakova.jpg" },
+        { "name": "Radka Paulusová, DiS.", "role": "Dental Hygienist", "photo": "radka-paulusova.jpg" },
+        { "name": "Natálie Barčáková, DiS.", "role": "Dental Hygienist", "photo": "natalie-barcakova.jpg" },
         { "name": "Eva Kýčková", "role": "Dental Nurse" },
-        { "name": "Romana Parýzková", "role": "Dental Nurse", "photo": "/images/romana-paryzkova.jpg" },
-        { "name": "Lucie Sluková", "role": "Dental Nurse", "photo": "/images/lucie-slukova.jpg" }
+        { "name": "Romana Parýzková", "role": "Dental Nurse", "photo": "romana-paryzkova.jpg" },
+        { "name": "Lucie Sluková", "role": "Dental Nurse", "photo": "lucie-slukova.jpg" }
       ]
     },
     "equip": {

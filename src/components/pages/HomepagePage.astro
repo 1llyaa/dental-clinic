@@ -2,12 +2,20 @@
 import Base from '../../layouts/Base.astro';
 import FinalCta from '../FinalCta.astro';
 import { getTranslations, type Locale } from '../../i18n/utils';
+import { Image } from 'astro:assets';
+import { teamPhotos } from '../../images/teamPhotos';
+import heroDoktorka from '../../images/hero-doktorka.png';
+import implantatyImg from '../../images/implantaty.jpg';
+import prfCentrifugaImg from '../../images/prf-centrifuga.jpg';
+import estetikaImg from '../../images/estetika.jpg';
+import hygienaImg from '../../images/hygiena.jpg';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const t = getTranslations(locale);
 const h = t.home;
 const prefix = locale === 'cs' ? '' : `/${locale}`;
+const svcCardImages = [implantatyImg, prfCentrifugaImg, estetikaImg, hygienaImg];
 ---
 <Base title={h.meta.title} description={h.meta.description} locale={locale}>
 
@@ -25,7 +33,7 @@ const prefix = locale === 'cs' ? '' : `/${locale}`;
         </a>
         <div class="hero-support">{h.hero.support}</div>
       </div>
-      <div class="hero-portrait"><img src="/images/hero-doktorka.png" alt={h.hero.photoAlt} loading="eager" /></div>
+      <div class="hero-portrait"><Image src={heroDoktorka} alt={h.hero.photoAlt} loading="eager" /></div>
     </div>
   </section>
 
@@ -52,7 +60,7 @@ const prefix = locale === 'cs' ? '' : `/${locale}`;
       <div class="svc-grid">
         {h.services.cards.map((card, i) => (
           <a href={`${prefix}/sluzby#${card.id}`} class="svc-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
-            <div class="svc-card-photo"><img src={['/images/implantaty.jpg', '/images/prf-centrifuga.jpg', '/images/estetika.jpg', '/images/hygiena.jpg'][i]} alt={card.photoAlt} loading="lazy" /></div>
+            <div class="svc-card-photo"><Image src={svcCardImages[i]} alt={card.photoAlt} loading="lazy" /></div>
             <div class="svc-card-body">
               <h4>{card.title}</h4>
               <p>{card.text}</p>
@@ -77,7 +85,7 @@ const prefix = locale === 'cs' ? '' : `/${locale}`;
       <div class="team-grid">
         {h.team.members.map((member, i) => (
           <div class="team-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
-            <div class="team-card-photo"><img src={member.photo ?? '/images/person-placeholder.png'} alt={member.name} loading="lazy" /></div>
+            <div class="team-card-photo"><Image src={member.photo ? teamPhotos[member.photo] : teamPhotos['person-placeholder.png']} alt={member.name} loading="lazy" /></div>
             <div class="team-card-info">
               <div class="team-card-name">{member.name}</div>
               <div class="team-card-role">{member.role}</div>

@@ -2,6 +2,9 @@
 import Base from '../../layouts/Base.astro';
 import FinalCta from '../FinalCta.astro';
 import { getTranslations, type Locale } from '../../i18n/utils';
+import { Image } from 'astro:assets';
+import { teamPhotos } from '../../images/teamPhotos';
+import interierImg from '../../images/interier.jpg';
 
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
@@ -24,7 +27,7 @@ const o = t.onas;
           <h2>{o.story.h2}</h2>
           {o.story.paragraphs.map(p => <p>{p}</p>)}
         </div>
-        <div class="about-photo"><img src="/images/interier.jpg" alt={o.story.photoAlt} loading="lazy" /></div>
+        <div class="about-photo"><Image src={interierImg} alt={o.story.photoAlt} loading="lazy" /></div>
       </div>
     </div>
   </section>
@@ -37,7 +40,7 @@ const o = t.onas;
       <div class="team-grid">
         {o.team.members.map((member, i) => (
           <div class="fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
-            <div class="team-card-photo"><img src={member.photo ?? '/images/person-placeholder.png'} alt={member.name} loading="lazy" /></div>
+            <div class="team-card-photo"><Image src={member.photo ? teamPhotos[member.photo] : teamPhotos['person-placeholder.png']} alt={member.name} loading="lazy" /></div>
             <div class="team-card-info">
               <div class="team-card-name">{member.name}</div>
               <div class="team-card-role">{member.role}</div>

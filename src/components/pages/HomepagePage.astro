@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import FinalCta from '../FinalCta.astro';
 import { getTranslations, type Locale } from '../../i18n/utils';
+import { Image } from 'astro:assets';
 import { teamPhotos } from '../../images/teamPhotos';
 import heroDoktorka from '../../images/hero-doktorka.png';
 import implantatyImg from '../../images/implantaty.jpg';
@@ -33,7 +34,7 @@ const svcCardImages = [implantatyImg, prfCentrifugaImg, estetikaImg, hygienaImg]
         <div class="hero-support">{h.hero.support}</div>
       </div>
       <div class="hero-portrait">
-        <img src={heroDoktorka.src} width={heroDoktorka.width} height={heroDoktorka.height} alt={h.hero.photoAlt} loading="eager" />
+        <Image src={heroDoktorka} alt={h.hero.photoAlt} loading="eager" />
         <div class="hero-badge">
           <strong>{h.hero.doctorName}</strong>
           <span>{h.hero.doctorRole}</span>
@@ -65,7 +66,7 @@ const svcCardImages = [implantatyImg, prfCentrifugaImg, estetikaImg, hygienaImg]
       <div class="svc-grid">
         {h.services.cards.map((card, i) => (
           <a href={`${prefix}/sluzby#${card.id}`} class="svc-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
-            <div class="svc-card-photo"><img src={svcCardImages[i].src} width={svcCardImages[i].width} height={svcCardImages[i].height} alt={card.photoAlt} loading="lazy" /></div>
+            <div class="svc-card-photo"><Image src={svcCardImages[i]} alt={card.photoAlt} loading="lazy" /></div>
             <div class="svc-card-body">
               <h4>{card.title}</h4>
               <p>{card.text}</p>
@@ -90,9 +91,7 @@ const svcCardImages = [implantatyImg, prfCentrifugaImg, estetikaImg, hygienaImg]
       <div class="team-grid">
         {h.team.members.map((member, i) => (
           <div class="team-card fade-in" style={i > 0 ? `animation-delay:${i * 0.1}s` : ''}>
-            {(() => { const photo = member.photo ? teamPhotos[member.photo] : teamPhotos['person-placeholder.png']; return (
-              <div class="team-card-photo"><img src={photo.src} width={photo.width} height={photo.height} alt={member.name} loading="lazy" /></div>
-            ); })()}
+            <div class="team-card-photo"><Image src={member.photo ? teamPhotos[member.photo] : teamPhotos['person-placeholder.png']} alt={member.name} loading="lazy" /></div>
             <div class="team-card-info">
               <div class="team-card-name">{member.name}</div>
               <div class="team-card-role">{member.role}</div>

@@ -134,7 +134,7 @@
         {
           "q": "I've had a bad experience at the dentist. How will it be this time?",
           "a": "We understand and take it seriously. That's why we work under a microscope, with precision and in a calm environment that gives you space too. And if the fear is too great, we have nitrous oxide.",
-          "open": true
+          "open": false
         },
         {
           "q": "I'm not sure I can afford it. How do I find out the price?",

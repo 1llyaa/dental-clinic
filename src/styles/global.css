@@ -1275,6 +1275,12 @@ img {
   display: block;
   border-radius: inherit;
 }
+.svc-card-photo img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
 
 /* ── EQUIPMENT (o-nas) ── */
 .equip {
@@ -1644,6 +1650,14 @@ img {
 @media (max-width: 640px) {
   :root {
     --side-pad: 1.25rem;
+  }
+
+  /* cards animating in one-by-one while the carousel is being swiped causes
+     jank — the reveal is a page-scroll thing, not useful mid-swipe anyway */
+  .svc-card.fade-in {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 
   .nav-links {

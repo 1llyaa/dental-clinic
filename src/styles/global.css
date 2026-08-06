@@ -1726,7 +1726,6 @@ img {
     overflow-x: auto;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
     scrollbar-width: none;
     gap: 1rem;
     margin: 0 -1.25rem 1.5rem;
@@ -1747,7 +1746,6 @@ img {
     overflow-x: auto;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
     scrollbar-width: none;
     gap: 1rem;
     margin: 0 -1.25rem;

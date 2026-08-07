@@ -75,10 +75,13 @@ const svcCardImages = [implantatyImg, prfCentrifugaImg, estetikaImg, hygienaImg]
           </a>
         ))}
       </div>
-      <div class="svc-secondary">
-        {h.services.tags.map(tag => (
-          <a href={`${prefix}/sluzby#${tag.id}`} class="svc-tag">{tag.text}</a>
-        ))}
+      <div class="svc-secondary-row">
+        <h3 class="svc-secondary-title">{h.services.tagsTitle}</h3>
+        <div class="svc-secondary">
+          {h.services.tags.map(tag => (
+            <a href={`${prefix}/sluzby#${tag.id}`} class="svc-tag">{tag.text}</a>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -127,7 +130,7 @@ const svcCardImages = [implantatyImg, prfCentrifugaImg, estetikaImg, hygienaImg]
                 ))}
               </div>
               <p class="proof-quote">„{card.quote}“</p>
-              <div class="proof-author"><span class="proof-avatar" aria-hidden="true"></span>{card.author}</div>
+              <div class="proof-author">{card.author}</div>
             </article>
           ))}
         </div>

@@ -91,6 +91,7 @@
           "link": "Zjistit více →"
         }
       ],
+      "tagsTitle": "A dále se věnujeme",
       "tags": [
         { "id": "zachovna", "text": "Záchovná stomatologie" },
         { "id": "chirurgie", "text": "Stomatochirurgie" },
@@ -175,7 +176,7 @@
       { "id": "estetika", "text": "Estetika", "priority": true },
       { "id": "hygiena", "text": "Hygiena", "priority": true },
       { "id": "rajsky-plyn", "text": "Rajský plyn", "priority": true },
-      { "id": "zachovna", "text": "Záchovná", "priority": false },
+      { "id": "zachovna", "text": "Záchovná stomatologie", "priority": false },
       { "id": "chirurgie", "text": "Chirurgie", "priority": false },
       { "id": "beleni", "text": "Bělení", "priority": false },
       { "id": "ortodoncie", "text": "Ortodoncie", "priority": false }

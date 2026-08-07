@@ -1644,20 +1644,22 @@ img {
 /* ── RESPONSIVE — tablet ── */
 @media (max-width: 900px) {
   .hero {
-    padding-bottom: 280px;
+    padding-bottom: 3rem;
   }
   .hero .wrap {
     grid-template-columns: 1fr;
   }
   .hero-portrait {
-    /* single-column layout breaks the stretch-to-match-text-height trick
-       above, so fall back to pinning it against .hero directly */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    justify-self: unset;
-    width: 300px;
+    /* single-column layout: same width as .hero-text, just flows
+       normally underneath it instead of centering/pinning against .hero */
+    position: relative;
+    justify-self: stretch;
+    align-self: auto;
+    width: auto;
+    margin-top: 2rem;
+  }
+  .hero-badge {
+    right: 0;
   }
   .svc-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1774,19 +1776,36 @@ img {
 
   .hero {
     min-height: auto;
-    padding: 2.5rem 0 320px;
+    padding: 2.5rem 0 3rem;
+  }
+  .hero-text {
+    text-align: center;
   }
   .hero-text h1 {
     font-size: 32px;
   }
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta {
+    margin: 0 auto;
+  }
   .hero-portrait {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: 230px;
+    /* same width as .hero-text now — flows normally underneath it
+       instead of being centered/pinned against .hero */
+    align-self: auto;
+    justify-self: stretch;
+    width: auto;
+    margin-top: 1.5rem;
+  }
+  .hero-portrait img {
+    /* crop 200px off the bottom of the photo so it isn't so tall here;
+       negative margin removes the now-empty layout space it left behind */
+    margin-bottom: -100px;
   }
   .hero-badge {
-    right: 0.25rem;
+    right: 0;
     bottom: 1rem;
     padding: 8px 12px;
     white-space: normal;

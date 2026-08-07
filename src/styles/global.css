@@ -535,7 +535,7 @@ img {
 }
 .hero-badge {
   position: absolute;
-  right: -1rem;
+  right: 0;
   bottom: 1.5rem;
   background: white;
   border: 1px solid var(--border-light);

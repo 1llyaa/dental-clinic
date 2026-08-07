@@ -76,10 +76,30 @@ img {
 .topbar {
   background: var(--taupe-700);
   color: var(--taupe-200);
-  text-align: center;
   padding: 10px var(--side-pad);
   font-size: 13px;
   letter-spacing: 0.03em;
+}
+.topbar-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+}
+.topbar-hours {
+  grid-column: 1;
+  justify-self: start;
+}
+.topbar-support {
+  grid-column: 2;
+  justify-self: center;
+  text-align: center;
+}
+.topbar-address {
+  grid-column: 3;
+  justify-self: end;
 }
 .topbar a {
   color: var(--taupe-100);
@@ -400,8 +420,8 @@ img {
   position: relative;
   min-height: 540px;
   display: flex;
-  align-items: center;
-  padding: 5rem 0 4rem;
+  align-items: flex-end;
+  padding: 5rem 0 0;
   overflow: hidden;
 }
 .hero-bg {
@@ -442,7 +462,10 @@ img {
   display: grid;
   grid-template-columns: 1fr 460px;
   gap: 3rem;
-  align-items: center;
+  align-items: stretch;
+}
+.hero-text {
+  align-self: center;
 }
 .hero-text h1 {
   font-family: var(--font-display);
@@ -498,12 +521,15 @@ img {
   font-style: italic;
 }
 .hero-portrait {
-  /* pinned to .hero (not .wrap) so it can reach the section's true bottom
-     edge, but the right offset mirrors .wrap's own centering math so it
-     still lines up with the content edge used by every section below */
-  position: absolute;
-  right: max(var(--side-pad), calc((100vw - var(--max-w)) / 2 + var(--side-pad)));
-  bottom: 0;
+  /* a normal grid item again: .wrap's align-items:stretch makes this column
+     match the text column's height, and this just pins its own content to
+     the bottom of that stretched box. Since .hero has no bottom padding,
+     "bottom of the row" and "bottom of the section" are the same line. */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  justify-self: end;
   width: 380px;
   z-index: 1;
 }
@@ -781,6 +807,10 @@ img {
 /* ── REVIEWS / SOCIAL PROOF ── */
 .reviews {
   padding: 5rem 0;
+}
+.reviews .wrap {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-light);
 }
 .reviews .section-label {
   font-size: 11px;
@@ -1611,10 +1641,20 @@ img {
 
 /* ── RESPONSIVE — tablet ── */
 @media (max-width: 900px) {
+  .hero {
+    padding-bottom: 280px;
+  }
   .hero .wrap {
     grid-template-columns: 1fr;
   }
   .hero-portrait {
+    /* single-column layout breaks the stretch-to-match-text-height trick
+       above, so fall back to pinning it against .hero directly */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    justify-self: unset;
     width: 300px;
   }
   .svc-grid {
@@ -1665,20 +1705,10 @@ img {
   }
 }
 
-/* ── RESPONSIVE — mobile ── */
-@media (max-width: 640px) {
-  :root {
-    --side-pad: 1.25rem;
-  }
-
-  /* cards animating in one-by-one while the carousel is being swiped causes
-     jank — the reveal is a page-scroll thing, not useful mid-swipe anyway */
-  .svc-card.fade-in {
-    opacity: 1;
-    transform: none;
-    animation: none;
-  }
-
+/* ── RESPONSIVE — nav collapses to hamburger earlier than the rest of the
+   mobile layout: the phone button + language switch + 3 links don't fit
+   comfortably in the 640–900px range ── */
+@media (max-width: 820px) {
   .nav-links {
     display: none;
   }
@@ -1710,6 +1740,34 @@ img {
   }
   .nav-actions {
     display: none;
+  }
+}
+
+/* ── RESPONSIVE — mobile ── */
+@media (max-width: 640px) {
+  :root {
+    --side-pad: 1.25rem;
+  }
+
+  .topbar-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 0.35rem;
+  }
+  .topbar-hours,
+  .topbar-support,
+  .topbar-address {
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  /* cards animating in one-by-one while the carousel is being swiped causes
+     jank — the reveal is a page-scroll thing, not useful mid-swipe anyway */
+  .svc-card.fade-in {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 
   .hero {

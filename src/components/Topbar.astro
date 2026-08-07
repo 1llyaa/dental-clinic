@@ -4,7 +4,12 @@ import { getTranslations, type Locale } from '../i18n/utils';
 interface Props { locale?: Locale; }
 const { locale = 'cs' } = Astro.props;
 const t = getTranslations(locale);
+const prefix = locale === 'cs' ? '' : `/${locale}`;
 ---
 <div class="topbar">
-  {t.topbar.text} <a href={t.site.phoneLink}>{t.topbar.cta}</a>
+  <div class="topbar-inner">
+    <span class="topbar-hours">{t.site.hours}</span>
+    <span class="topbar-support">{t.topbar.support}</span>
+    <a class="topbar-address" href={`${prefix}/kontakt`}>{t.topbar.addressLink}</a>
+  </div>
 </div>

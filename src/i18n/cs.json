@@ -9,8 +9,8 @@
     "mapText": "Zobrazit na mapě"
   },
   "topbar": {
-    "text": "Přijímáme nové pacienty —",
-    "cta": "zavolejte nám"
+    "support": "Přijímáme nové pacienty",
+    "addressLink": "Adresa a mapa"
   },
   "nav": {
     "logo": "Dentiyak",

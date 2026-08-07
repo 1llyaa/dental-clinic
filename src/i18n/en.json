@@ -9,8 +9,8 @@
     "mapText": "View on map"
   },
   "topbar": {
-    "text": "Accepting new patients —",
-    "cta": "call us"
+    "support": "We're accepting new patients",
+    "addressLink": "Address & map"
   },
   "nav": {
     "logo": "Dentiyak",

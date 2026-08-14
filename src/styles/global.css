@@ -1033,7 +1033,7 @@ img {
 .cta-emergency {
   font-size: 13px;
   color: var(--taupe-400);
-  max-width: 480px;
+  max-width: 640px;
   margin: 0 auto;
   line-height: 1.7;
 }
